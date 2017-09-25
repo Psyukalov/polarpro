@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPCustomSettingsViewController">
+            <connections>
+                <outlet property="layoutConstraint" destination="ZBE-RS-cTJ" id="Eek-ve-21q"/>
+                <outlet property="searchTableView" destination="J0d-2y-zZM" id="O6f-60-GNd"/>
+                <outlet property="tableView" destination="Gb4-B2-LP1" id="43e-R8-XyP"/>
+                <outlet property="view" destination="iN0-l3-epB" id="yDZ-mQ-OIs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watermark_logo_i.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-0w-3Si">
+                    <rect key="frame" x="141" y="606" width="93" height="41"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gb4-B2-LP1" customClass="VPDraggableTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.14117647059999999" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="sNU-bw-lsb"/>
+                        <outlet property="delegate" destination="-1" id="E9e-bL-lZM"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J0d-2y-zZM">
+                    <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.14117647059999999" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="4dM-sK-gAb"/>
+                        <outlet property="delegate" destination="-1" id="sS4-xD-YNX"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Gb4-B2-LP1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0yo-jt-oKR"/>
+                <constraint firstAttribute="bottom" secondItem="J0d-2y-zZM" secondAttribute="bottom" id="1xU-P4-cgX"/>
+                <constraint firstItem="Lev-0w-3Si" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bw8-qg-hjh"/>
+                <constraint firstAttribute="trailing" secondItem="J0d-2y-zZM" secondAttribute="trailing" id="GKV-wx-Ffl"/>
+                <constraint firstAttribute="bottom" secondItem="Lev-0w-3Si" secondAttribute="bottom" constant="20" id="Hpy-mf-x8s"/>
+                <constraint firstAttribute="trailing" secondItem="Gb4-B2-LP1" secondAttribute="trailing" id="QrF-ya-nrL"/>
+                <constraint firstItem="J0d-2y-zZM" firstAttribute="top" secondItem="Gb4-B2-LP1" secondAttribute="top" constant="60" id="ZBE-RS-cTJ"/>
+                <constraint firstAttribute="bottom" secondItem="Gb4-B2-LP1" secondAttribute="bottom" id="bOL-nS-sbF"/>
+                <constraint firstItem="J0d-2y-zZM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pGb-Eu-VQj"/>
+                <constraint firstItem="Gb4-B2-LP1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wnI-Ae-rUh"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="watermark_logo_i.png" width="93" height="41"/>
+    </resources>
+</document>

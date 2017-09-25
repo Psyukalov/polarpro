@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VPRefreshControl">
+            <connections>
+                <outlet property="imageView" destination="0Iu-32-o7C" id="mwT-FA-mZb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kp_1_i.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Iu-32-o7C">
+                    <rect key="frame" x="87" y="9" width="26" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="26" id="1o0-Xl-8Jt"/>
+                        <constraint firstAttribute="width" secondItem="0Iu-32-o7C" secondAttribute="height" multiplier="1:1" id="YG3-SS-wx4"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0Iu-32-o7C" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="CWk-Zl-0OM"/>
+                <constraint firstItem="0Iu-32-o7C" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="XKG-ys-raq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="24.5" y="-183.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="kp_1_i.png" width="40" height="40"/>
+    </resources>
+</document>

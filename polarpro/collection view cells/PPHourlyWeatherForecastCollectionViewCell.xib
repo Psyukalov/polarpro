@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PPHourlyWeatherForecastCollectionViewCell" id="gTV-IL-0wX" customClass="PPHourlyWeatherForecastCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="60" height="92"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBf-ZK-hPx">
+                        <rect key="frame" x="14.5" y="10" width="31" height="12"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V5-Z7-QZ9">
+                        <rect key="frame" x="23" y="70" width="14.5" height="12"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sleet_i.png" translatesAutoresizingMaskIntoConstraints="NO" id="82c-YO-8Er">
+                        <rect key="frame" x="16" y="32" width="28" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="82c-YO-8Er" secondAttribute="height" multiplier="1:1" id="ncl-2n-o3s"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="82c-YO-8Er" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Sfm-P5-3T6"/>
+                <constraint firstItem="82c-YO-8Er" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="28:60" id="c4A-vl-ePc"/>
+                <constraint firstItem="3V5-Z7-QZ9" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="dXM-JD-2Du"/>
+                <constraint firstItem="BBf-ZK-hPx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="fyO-Xp-bFJ"/>
+                <constraint firstItem="BBf-ZK-hPx" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gaW-JZ-jkn"/>
+                <constraint firstAttribute="bottom" secondItem="3V5-Z7-QZ9" secondAttribute="bottom" constant="10" id="stk-1V-frm"/>
+                <constraint firstItem="82c-YO-8Er" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="x1L-PD-W97"/>
+            </constraints>
+            <size key="customSize" width="60" height="73"/>
+            <connections>
+                <outlet property="iconImageView" destination="82c-YO-8Er" id="3G1-Yc-5r1"/>
+                <outlet property="temperatureLabel" destination="3V5-Z7-QZ9" id="o6l-Xk-OUg"/>
+                <outlet property="timeLabel" destination="BBf-ZK-hPx" id="UUv-bl-1rF"/>
+            </connections>
+            <point key="canvasLocation" x="36" y="45"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="sleet_i.png" width="128" height="128"/>
+    </resources>
+</document>

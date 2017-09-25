@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPStartView">
+            <connections>
+                <outlet property="mainImageView" destination="Aji-Pu-Q3z" id="Oob-aL-Euw"/>
+                <outlet property="photoImageView" destination="TXM-y1-8UD" id="K85-UL-rYj"/>
+                <outlet property="polarImageView" destination="kR7-KD-Sob" id="Xz5-aU-12n"/>
+                <outlet property="proImageView" destination="qYj-Hg-fp8" id="mXM-YO-wOD"/>
+                <outlet property="sloganLabel" destination="haW-DW-lrD" id="ciI-Nz-uzx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aji-Pu-Q3z">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TXM-y1-8UD">
+                    <rect key="frame" x="0.0" y="120" width="375" height="375"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TXM-y1-8UD" secondAttribute="height" multiplier="1:1" id="fNp-Tq-UK4"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="slogan" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haW-DW-lrD">
+                    <rect key="frame" x="167" y="620.5" width="41.5" height="16.5"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_text_0_i.png" translatesAutoresizingMaskIntoConstraints="NO" id="kR7-KD-Sob">
+                    <rect key="frame" x="180.5" y="306.5" width="78" height="28"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_text_1_i.png" translatesAutoresizingMaskIntoConstraints="NO" id="qYj-Hg-fp8">
+                    <rect key="frame" x="180" y="336.5" width="78" height="28"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Aji-Pu-Q3z" secondAttribute="trailing" id="3mf-mj-2xU"/>
+                <constraint firstItem="TXM-y1-8UD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6gF-Eo-kwa"/>
+                <constraint firstItem="haW-DW-lrD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6vd-o9-36r"/>
+                <constraint firstAttribute="bottom" secondItem="haW-DW-lrD" secondAttribute="bottom" constant="30" id="7bE-WW-8ql"/>
+                <constraint firstItem="Aji-Pu-Q3z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="99D-iw-XB5"/>
+                <constraint firstItem="TXM-y1-8UD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GrI-U4-iu8"/>
+                <constraint firstItem="Aji-Pu-Q3z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JjO-dp-q8U"/>
+                <constraint firstAttribute="bottom" secondItem="Aji-Pu-Q3z" secondAttribute="bottom" id="Vmf-6J-BUu"/>
+                <constraint firstItem="TXM-y1-8UD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-26" id="ffr-5M-3oL"/>
+                <constraint firstItem="qYj-Hg-fp8" firstAttribute="top" secondItem="kR7-KD-Sob" secondAttribute="bottom" constant="2" id="ibw-wI-Pv7"/>
+                <constraint firstAttribute="trailing" secondItem="TXM-y1-8UD" secondAttribute="trailing" id="jPC-cF-Wmj"/>
+                <constraint firstItem="kR7-KD-Sob" firstAttribute="centerX" secondItem="TXM-y1-8UD" secondAttribute="centerX" constant="32" id="qhN-Gr-Of0"/>
+                <constraint firstItem="kR7-KD-Sob" firstAttribute="centerY" secondItem="TXM-y1-8UD" secondAttribute="centerY" constant="13" id="s6m-gI-a5s"/>
+                <constraint firstItem="qYj-Hg-fp8" firstAttribute="leading" secondItem="kR7-KD-Sob" secondAttribute="leading" id="tCO-jg-hWz"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo_text_0_i.png" width="78" height="28"/>
+        <image name="logo_text_1_i.png" width="78" height="28"/>
+    </resources>
+</document>

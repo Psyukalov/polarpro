@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPGoldenHourViewController">
+            <connections>
+                <outlet property="carouselView" destination="AtK-Yf-oYp" id="qlh-Jr-m52"/>
+                <outlet property="pageControl" destination="RTT-eW-UQ1" id="PYA-L7-KwQ"/>
+                <outlet property="refreshControl" destination="ugz-Xo-hWU" id="ZaS-cS-W3h"/>
+                <outlet property="scrollView" destination="6Uh-le-Vp0" id="hYx-89-F5i"/>
+                <outlet property="view" destination="HSJ-qv-d2Z" id="1Ek-rg-o9H"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="HSJ-qv-d2Z">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Uh-le-Vp0">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AtK-Yf-oYp" customClass="iCarousel">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RTT-eW-UQ1" customClass="VPPageControl">
+                                    <rect key="frame" x="168" y="630" width="39" height="37"/>
+                                </pageControl>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="RTT-eW-UQ1" secondAttribute="bottom" id="0Aa-aE-hZH"/>
+                                <constraint firstItem="RTT-eW-UQ1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Kiq-cS-7MB"/>
+                                <constraint firstAttribute="bottom" secondItem="AtK-Yf-oYp" secondAttribute="bottom" id="WyB-SQ-UsM"/>
+                                <constraint firstItem="AtK-Yf-oYp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bas-bn-yfE"/>
+                                <constraint firstItem="AtK-Yf-oYp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dt5-5v-ZP9"/>
+                                <constraint firstAttribute="trailing" secondItem="AtK-Yf-oYp" secondAttribute="trailing" id="l9L-9I-git"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="6si-fT-BQF"/>
+                        <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="6Uh-le-Vp0" secondAttribute="top" id="Jnj-8q-2TC"/>
+                        <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="6Uh-le-Vp0" secondAttribute="leading" id="TmI-KO-N8Z"/>
+                        <constraint firstItem="iN0-l3-epB" firstAttribute="centerY" secondItem="6Uh-le-Vp0" secondAttribute="centerY" id="WCX-1a-7HN"/>
+                        <constraint firstItem="iN0-l3-epB" firstAttribute="centerX" secondItem="6Uh-le-Vp0" secondAttribute="centerX" id="YaH-KO-djm"/>
+                        <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="noD-QM-gZK"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="UT8-sG-oU4"/>
+                    </connections>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ugz-Xo-hWU" customClass="VPRefreshControl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="zIl-ze-gJc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="6Uh-le-Vp0" firstAttribute="top" secondItem="HSJ-qv-d2Z" secondAttribute="top" id="7E0-Zx-bcL"/>
+                <constraint firstItem="ugz-Xo-hWU" firstAttribute="leading" secondItem="HSJ-qv-d2Z" secondAttribute="leading" id="9T3-3U-3ZR"/>
+                <constraint firstAttribute="trailing" secondItem="6Uh-le-Vp0" secondAttribute="trailing" id="FDi-OR-1f4"/>
+                <constraint firstItem="6Uh-le-Vp0" firstAttribute="leading" secondItem="HSJ-qv-d2Z" secondAttribute="leading" id="IVT-FT-CVN"/>
+                <constraint firstAttribute="trailing" secondItem="ugz-Xo-hWU" secondAttribute="trailing" id="Ie6-GQ-Np8"/>
+                <constraint firstItem="ugz-Xo-hWU" firstAttribute="top" secondItem="HSJ-qv-d2Z" secondAttribute="top" id="SC5-dc-GDI"/>
+                <constraint firstAttribute="bottom" secondItem="6Uh-le-Vp0" secondAttribute="bottom" id="rnx-00-doC"/>
+            </constraints>
+            <point key="canvasLocation" x="507" y="52"/>
+        </view>
+    </objects>
+</document>

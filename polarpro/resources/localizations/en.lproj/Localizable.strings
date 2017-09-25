@@ -1,0 +1,294 @@
+/* 
+  Localizable.strings
+  polarpro
+
+  Created by Владимир Псюкалов on 05.05.17.
+  Copyright © 2017 YOUROCK INC. All rights reserved.
+*/
+
+
+//----
+
+"api_localize_key" = "EN";
+
+"done" = "Done";
+
+"slogan" = "#CAPTURE PERFECTION";
+
+"development" = "YOUROCK INC";
+
+"open_sites" = "Pull up\nto open website";
+
+"notification_title_20_min" = "Golden Hour will start in 20 minutes";
+"notification_title_now" = "Golden Hour began";
+
+"error" = "Error";
+
+"city_limit" = "You can add only %ld cities";
+
+//----
+
+"menu" = "Menu";
+
+"version" = "Version";
+
+"menu_item_devices" = "DEVICES";
+"menu_item_settings" = "SETTINGS";
+"menu_item_locations" = "LOCATIONS";
+"menu_item_filters" = "FILTERS";
+"menu_item_support" = "SUPPORT";
+"menu_item_pro_team" = "PRO-TEAM";
+
+//----
+
+"support" = "Support";
+"support_tip" = "Please choose your option";
+
+"menu_item_call_us" = "Call us +1 (949) 220 9395";
+"menu_item_write_to_us" = "Write to us";
+
+//----
+
+"filter_guide_settings" = "Filter Guide Settings";
+"filter_guide_settings_tip" = "Please choose your option";
+
+"menu_item_choose_devices" = "Choose Your Devices";
+"menu_item_choose_filters" = "Choose Your Filters";
+"menu_item_help_with_guide" = "Help Using Calculator";
+
+
+//----
+
+"about_us" = "About Us";
+
+"about_us_description" = "Founded on the simple mission to improve the outdoor filming experience, PolarPro designs products to help you capture the most epic content possible.\nWith headquarters in Costa Mesa, CA, it’s team of action sport enthusiasts and cinematographers aim to develop products inspired by real experiences, that solve real problems. With a wide range of custom designed products, we offer the solutions you need to capture high quality content; wherever your adventures may take you.";
+
+//----
+
+"kp_information" = "KP Information";
+
+"kp_information_description" = "The K-index, and by extension the Planetary K-index, are used to characterize the magnitude of geomagnetic storms.\nKp is an excellent indicator of disturbances in the Earth's magnetic field and is used by SWPC to decide whether geomagnetic alerts and warnings need to be issued for users who are affected by these disturbances.\nThe principal users affected by geomagnetic storms are the electrical power grid, spacecraft operations, users of radio signals that reflect off of or pass through the ionosphere, and osensetive equpements like quadcopters.";
+
+//----
+
+"support_ticket_tip" = "Create a support ticket";
+
+"placeholder_your_name" = "Your name";
+"placeholder_your_email" = "Your e-mail";
+"placeholder_subject" = "Subject";
+"placeholder_problem_description" = "Describe you problem...";
+
+"error_placeholder_your_name" = "Please add your name";
+"error_placeholder_your_email" = "Please add your e-mail";
+"error_placeholder_subject" = "Please add subject";
+"error_placeholder_problem_description" = "Please add describe you problem";
+
+"send_message" = "SEND MESSAGE";
+
+//----
+
+"filter_guide_help" = "Filter Guide Help";
+
+"how_to_use" = "How to use";
+"tips" = "Tips";
+"faq" = "FAQ";
+
+"how_to_use_description" = "This app is designed to help calculate which filter to use to get your shutter speed to double your frame rate for smooth cinematic video.\n1. Enter the FPS (Frames Per Second) you are shooting with. The app is going to help you calculate how to get shutter speed to double frame rate. Example: Your frame rate is 30, the app will tell you how to get your shutter to 1/60th.\n2. Enter your ISO. ISO is part of the exposure triangle; make sure ISO stays the same. (It can occasionally fluctuate in Auto exposure mode)\n3. Enter the Shutter Speed the camera is currently shooting at. This number can be found on your DJI app.\n4. If there is a filter installed on your camera, enter it in the filter-installed field. The app needs this information to calculate properly.";
+"tips_description" = "1. When shooting in auto mode, remember that ISO, Aperture, and Shutter can change mid-flight. If you are shooting in Auto Mode you just need to get shutter close to double frame rate, because it will swing.\n2. When shooting in Manual Mode, Set your Aperture, ISO, and Frame Rate on your camera. Now enter the shutter speed the camera is firing at to properly expose the scene. The app will calculate which filter is needed to get shutter speed at double frame rate, with a balanced exposure. Install the recommended filter. Now change shutter speed to double frame rate on your camera.\nNote: Use the EV comp wheel to balance exposure if under a full F-Stop.";
+"faq_description" = "Why is it not recommending a filter?\nIf no filter is being recommended it means shutter speed is lower than double frame rate.\nWhat about Aperture?\nJust Make sure Aperture does not change between using the calculator and filming. This must be held constant.";
+
+//----
+
+"devices" = "Devices";
+
+"devices_tip" = "Please choose devices you own";
+
+//----
+
+"filters" = "Filters";
+
+"filters_tip" = "Please choose filters you own";
+
+"i_own_all" = "I own all of them";
+
+//----
+
+"no_devices_title" = "No Devices";
+
+"no_devices_message" = "Add devices that you own";
+
+"no_locations_title" = "No Cities";
+
+"no_locations_message" = "Add cities that you want";
+
+"no_locations_in_hub_title" = "Please Add Location(s)";
+
+"no_locations_in_hub_message" = "Use locations to view real time information on local filming conditions.";
+
+"thank_you_title" = "Thank you!";
+
+"thank_you_message" = "Your message has been sent to PolarPro HQ, and our team will be in contact with you shortly";
+
+"this_app_not_allow_to_use_geo_location_title" = "Geolocation Disabled";
+
+"this_app_not_allow_to_use_geo_location_message" = "In your phone's settings, find the PolarPro app and turn on geolocation";
+
+"this_app_not_allow_to_use_push_notification_title" = "Push Notifications Disabled";
+
+"this_app_not_allow_to_use_push_notification_message" = "In your phone's settings, find the PolarPro app and turn on push notifications";
+
+"i_understood" = "OK";
+
+//----
+
+"cancel" = "Cancel";
+"ok" = "Ok";
+"alert_cancel" = "CANCEL";
+"alert_ok" = "OK";
+"add" = "Add";
+"call" = "Call";
+
+"main_phone_number" = "+1 (959) 220 9395";
+"make_call" = "Make Call?";
+
+//----
+
+"settings" = "Settings";
+"sunrise_sunset_settings" = "Sunrise/Sunset Settings";
+"weather_settings" = "Weather Settings";
+"wind_condition_settings" = "Wind Condition Settings";
+
+"units" = "Units";
+"time" = "Time";
+"notifications" = "Notifications";
+"locations" = "Locations";
+
+"temperature" = "Temperature";
+"wind_speed" = "Wind Speed";
+
+"p_f" = "F";
+"p_c" = "C";
+
+"p_mph" = "mph";
+"p_km_h" = "km/h";
+"p_m_s" = "m/s";
+"p_knots" = "knots";
+
+"p_km" = "km";
+"p_mi" = "mi";
+
+"use_24" = "Use 24-Hour time";
+
+"send_notifications" = "Send notifications";
+
+"use_geo_locations" = "Use geo locations";
+
+"p_yes" = "Yes";
+"p_no" = "No";
+
+//----
+
+"locations" = "Locations";
+
+"current_location" = "Current location";
+
+"add_new_location" = "Add new location";
+
+//----
+
+"filter_guide" = "Filter Guide";
+
+"no_devices" = "NO DEVICES";
+
+"fps" = "Frames per Second";
+"shutter_speed" = "Current Shutter Speed";
+"filters_installed" = "Filters Installed";
+
+//----
+
+"hub_filter_guide" = "FILTER GUIDE";
+"hub_filter_guide_tip" = "Calculate ND Filter";
+"hub_site" = "www.polarpro.com";
+"shop_now" = "SHOP NOW";
+
+//----
+
+"save_to_fly" = "Save to fly";
+"save" = "Save";
+"caution" = "Caution";
+
+"low_risk" = "Low Risk";
+"medium_risk" = "Medium Risk";
+"high_risk" = "High Risk";
+
+//----
+
+// Proctator.
+
+"_n" = "N";
+"_s" = "S";
+"_w" = "W";
+"_e" = "E";
+"_ne" = "NE";
+"_se" = "SE";
+"_sw" = "SW";
+"_nw" = "NW";
+
+"N" = "North";
+"S" = "South";
+"W" = "West";
+"E" = "East";
+"NE" = "North-East";
+"SE" = "South-East";
+"SW" = "South-West";
+"NW" = "North-West";
+"NNE" = "North-North-East";
+"ENE" = "East-North-East";
+"ESE" = "East-South-East";
+"SSE" = "South-South-East";
+"SSW" = "South-South-West";
+"WSW" = "West-South-West";
+"WNW" = "West-North-West";
+"NNW" = "North-North-West";
+
+//----
+
+"kp_index" = "KP Index";
+
+//----
+
+"visibility" = "Visibility";
+
+//----
+
+"wind_condition" = "Wind Condition";
+
+//----
+
+"weather_forecast" = "Weather Forecast";
+
+//----
+
+"golden_hour" = "Golden Hour";
+
+//----
+
+"none" = "NONE";
+"enter_other_parameters" = "Enter other parameters";
+
+"shop_now" = "SHOP NOW";
+
+//----
+
+"duration" = "Duration";
+"min" = "min";
+"polar_day_or_night" = "Location near pole\n no sunsets or sunrises";
+"polar_day_or_night_more" = "Your location is near pole when days and nights do not end, hence its not possible to calculate sunsets and sunrises correctly";
+
+"start" = "Start";
+"finish" = "Finish";
+
+"next_sunrise" = "Next Sunrise";
+"next_sunset" = "Next Sunset";
+
+//----

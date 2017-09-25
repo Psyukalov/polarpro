@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPDevicesViewController">
+            <connections>
+                <outlet property="tableView" destination="pRW-EB-8mu" id="jCK-N2-0a1"/>
+                <outlet property="view" destination="iN0-l3-epB" id="7mi-YS-VBP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pRW-EB-8mu">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="E82-Js-8cS"/>
+                        <outlet property="delegate" destination="-1" id="Fn8-ls-Mw3"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="pRW-EB-8mu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1xt-np-uAq"/>
+                <constraint firstAttribute="bottom" secondItem="pRW-EB-8mu" secondAttribute="bottom" id="4bl-pt-ONG"/>
+                <constraint firstItem="pRW-EB-8mu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="96u-aA-xs5"/>
+                <constraint firstAttribute="trailing" secondItem="pRW-EB-8mu" secondAttribute="trailing" id="NQA-c3-eG1"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PPHourlyWindConditionCollectionViewCell" id="gTV-IL-0wX" customClass="PPHourlyWindConditionCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="60" height="92"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRX-oj-YOe">
+                        <rect key="frame" x="14.5" y="10" width="31" height="12"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbk-bx-LgY">
+                        <rect key="frame" x="25" y="67" width="10" height="15"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MD-8j-X59">
+                        <rect key="frame" x="18.5" y="36" width="23" height="20"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                        <color key="textColor" red="0.93333333330000001" green="0.71764705880000002" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Bbk-bx-LgY" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="HwI-f4-aHh"/>
+                <constraint firstItem="MRX-oj-YOe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="I77-P0-sab"/>
+                <constraint firstAttribute="bottom" secondItem="Bbk-bx-LgY" secondAttribute="bottom" constant="10" id="PIM-aD-Gsm"/>
+                <constraint firstItem="2MD-8j-X59" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XkG-IR-HIm"/>
+                <constraint firstItem="MRX-oj-YOe" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ZkK-6w-uhP"/>
+                <constraint firstItem="2MD-8j-X59" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="oTr-ba-jAj"/>
+            </constraints>
+            <size key="customSize" width="50" height="105"/>
+            <connections>
+                <outlet property="directionLabel" destination="Bbk-bx-LgY" id="dfF-pc-58m"/>
+                <outlet property="speedLabel" destination="2MD-8j-X59" id="GAU-Dc-VQC"/>
+                <outlet property="timeLabel" destination="MRX-oj-YOe" id="VnP-rg-nyr"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="79.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPWindConditionViewController">
+            <connections>
+                <outlet property="carouselView" destination="8gn-Zf-AyW" id="tIF-rD-HDe"/>
+                <outlet property="pageControl" destination="Q8N-pQ-Uyg" id="alI-Gn-KXp"/>
+                <outlet property="refreshControl" destination="0e9-z3-r0d" id="eCu-P1-YeC"/>
+                <outlet property="scrollView" destination="SRC-fA-ecN" id="GCx-xz-QMu"/>
+                <outlet property="view" destination="pLo-0W-thA" id="Yc2-S4-37J"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="pLo-0W-thA">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRC-fA-ecN">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gn-Zf-AyW" customClass="iCarousel">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Q8N-pQ-Uyg" customClass="VPPageControl">
+                                    <rect key="frame" x="140.5" y="531" width="39" height="37"/>
+                                </pageControl>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Q8N-pQ-Uyg" secondAttribute="bottom" id="YEE-5G-X9I"/>
+                                <constraint firstItem="8gn-Zf-AyW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZEO-hg-0sb"/>
+                                <constraint firstItem="Q8N-pQ-Uyg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="awd-vk-ZOM"/>
+                                <constraint firstAttribute="bottom" secondItem="8gn-Zf-AyW" secondAttribute="bottom" id="i5u-xw-Vo0"/>
+                                <constraint firstItem="8gn-Zf-AyW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oAu-eR-F5K"/>
+                                <constraint firstAttribute="trailing" secondItem="8gn-Zf-AyW" secondAttribute="trailing" id="sgo-5N-V58"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="iN0-l3-epB" firstAttribute="centerY" secondItem="SRC-fA-ecN" secondAttribute="centerY" id="0Uj-Rd-36G"/>
+                        <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="SRC-fA-ecN" secondAttribute="leading" id="M9B-wV-eex"/>
+                        <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="ZId-Lk-gfi"/>
+                        <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="SRC-fA-ecN" secondAttribute="top" id="d4Z-Va-on1"/>
+                        <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="gJ9-Ar-g9m"/>
+                        <constraint firstItem="iN0-l3-epB" firstAttribute="centerX" secondItem="SRC-fA-ecN" secondAttribute="centerX" id="tNf-CK-AY2"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="FdP-zb-L9c"/>
+                    </connections>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0e9-z3-r0d" customClass="VPRefreshControl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="APR-GS-lbJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="0e9-z3-r0d" firstAttribute="top" secondItem="pLo-0W-thA" secondAttribute="top" id="8Yw-TZ-Ez0"/>
+                <constraint firstAttribute="trailing" secondItem="SRC-fA-ecN" secondAttribute="trailing" id="PWW-a4-4OL"/>
+                <constraint firstItem="SRC-fA-ecN" firstAttribute="leading" secondItem="pLo-0W-thA" secondAttribute="leading" id="SL7-QH-SVQ"/>
+                <constraint firstAttribute="bottom" secondItem="SRC-fA-ecN" secondAttribute="bottom" id="a5u-tr-Dfq"/>
+                <constraint firstItem="SRC-fA-ecN" firstAttribute="top" secondItem="pLo-0W-thA" secondAttribute="top" id="ajX-dB-ofr"/>
+                <constraint firstAttribute="trailing" secondItem="0e9-z3-r0d" secondAttribute="trailing" id="uu0-TL-Nw6"/>
+                <constraint firstItem="0e9-z3-r0d" firstAttribute="leading" secondItem="pLo-0W-thA" secondAttribute="leading" id="zrc-9C-yvz"/>
+            </constraints>
+            <point key="canvasLocation" x="403" y="52"/>
+        </view>
+    </objects>
+</document>

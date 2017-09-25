@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-ExtraLightItalic.ttf">
+            <string>Montserrat-ExtraLightItalic</string>
+        </array>
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PPMessageCollectionViewCell" id="gTV-IL-0wX" customClass="PPMessageCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="512" height="512"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="512" height="512"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE0-tz-5wk">
+                        <rect key="frame" x="64" y="248" width="384" height="17.5"/>
+                        <fontDescription key="fontDescription" name="Montserrat-ExtraLightItalic" family="Montserrat" pointSize="14"/>
+                        <color key="textColor" red="0.58823529411764708" green="0.62745098039215685" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghi-vD-1St">
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="248"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcs-sy-6JX">
+                                <rect key="frame" x="240" y="114" width="33" height="20"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xcs-sy-6JX" firstAttribute="centerX" secondItem="Ghi-vD-1St" secondAttribute="centerX" id="A7C-3Z-dKK"/>
+                            <constraint firstItem="xcs-sy-6JX" firstAttribute="centerY" secondItem="Ghi-vD-1St" secondAttribute="centerY" id="rMG-Oe-zbf"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ylr-Op-kEi">
+                        <rect key="frame" x="0.0" y="265.5" width="512" height="246.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z4-Bx-kcl">
+                                <rect key="frame" x="192" y="91.5" width="128" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="BKr-GQ-BCH"/>
+                                    <constraint firstAttribute="height" constant="64" id="rWu-vg-StF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonAdd_TUI:" destination="gTV-IL-0wX" eventType="touchUpInside" id="rmj-bE-vfE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Z4-Bx-kcl" firstAttribute="centerX" secondItem="ylr-Op-kEi" secondAttribute="centerX" id="5rY-mt-ESs"/>
+                            <constraint firstItem="2Z4-Bx-kcl" firstAttribute="centerY" secondItem="ylr-Op-kEi" secondAttribute="centerY" id="EzB-aD-U5s"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Ghi-vD-1St" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4DU-9m-hBO"/>
+                <constraint firstItem="ZE0-tz-5wk" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="4Zc-Rz-NUe"/>
+                <constraint firstItem="ylr-Op-kEi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8lK-e4-KoS"/>
+                <constraint firstItem="ZE0-tz-5wk" firstAttribute="top" secondItem="Ghi-vD-1St" secondAttribute="bottom" id="EPM-Br-mbU"/>
+                <constraint firstAttribute="trailing" secondItem="Ghi-vD-1St" secondAttribute="trailing" id="VE1-8h-Z0I"/>
+                <constraint firstItem="ZE0-tz-5wk" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="VJC-jU-vli"/>
+                <constraint firstItem="Ghi-vD-1St" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="l4M-UL-sDR"/>
+                <constraint firstAttribute="trailing" secondItem="ZE0-tz-5wk" secondAttribute="trailing" constant="64" id="uTg-vT-cCZ"/>
+                <constraint firstItem="ZE0-tz-5wk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="64" id="uwt-RM-sFF"/>
+                <constraint firstAttribute="bottom" secondItem="ylr-Op-kEi" secondAttribute="bottom" id="vrX-9K-di8"/>
+                <constraint firstItem="ylr-Op-kEi" firstAttribute="top" secondItem="ZE0-tz-5wk" secondAttribute="bottom" id="wIg-TG-Pxr"/>
+                <constraint firstAttribute="trailing" secondItem="ylr-Op-kEi" secondAttribute="trailing" id="y29-hy-L5i"/>
+            </constraints>
+            <size key="customSize" width="254" height="243"/>
+            <connections>
+                <outlet property="buttonAdd" destination="2Z4-Bx-kcl" id="stf-Ua-2zC"/>
+                <outlet property="descriptionLabel" destination="ZE0-tz-5wk" id="bvX-9f-SEg"/>
+                <outlet property="titleLabel" destination="xcs-sy-6JX" id="Sbe-PD-p0A"/>
+            </connections>
+            <point key="canvasLocation" x="127" y="148"/>
+        </collectionViewCell>
+    </objects>
+</document>

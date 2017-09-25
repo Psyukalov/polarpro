@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PPDeviceTableViewCell" id="KGk-i7-Jjw" customClass="PPDeviceTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqb-26-IFh">
+                        <rect key="frame" x="20" y="11.5" width="41" height="20"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IT-8t-86U">
+                        <rect key="frame" x="69" y="11.5" width="49.5" height="20"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_selected_i.png" translatesAutoresizingMaskIntoConstraints="NO" id="mX9-Rd-gHq">
+                        <rect key="frame" x="276" y="10" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="nPu-QL-fZN"/>
+                            <constraint firstAttribute="width" secondItem="mX9-Rd-gHq" secondAttribute="height" multiplier="1:1" id="ylo-GF-2PB"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mX9-Rd-gHq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vpm-Pu-Cgh"/>
+                    <constraint firstItem="Iqb-26-IFh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Z9t-o9-yy2"/>
+                    <constraint firstAttribute="trailing" secondItem="mX9-Rd-gHq" secondAttribute="trailing" constant="20" id="b7e-8V-y3I"/>
+                    <constraint firstItem="7IT-8t-86U" firstAttribute="leading" secondItem="Iqb-26-IFh" secondAttribute="trailing" constant="8" id="cXx-W5-Nbo"/>
+                    <constraint firstItem="Iqb-26-IFh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jIP-CG-8sc"/>
+                    <constraint firstItem="7IT-8t-86U" firstAttribute="centerY" secondItem="Iqb-26-IFh" secondAttribute="centerY" id="ypo-m2-nKG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="checkImageView" destination="mX9-Rd-gHq" id="nuk-ew-Hhc"/>
+                <outlet property="markLabel" destination="Iqb-26-IFh" id="i7m-Gz-jVK"/>
+                <outlet property="modelLabel" destination="7IT-8t-86U" id="MGj-Uv-pvJ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check_selected_i.png" width="19" height="19"/>
+    </resources>
+</document>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Light.ttf">
+            <string>Montserrat-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PPAstronomyCollectionViewCell" id="gTV-IL-0wX" customClass="PPAstronomyCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBV-zw-trD" customClass="PPSunriseView">
+                        <rect key="frame" x="0.0" y="20" width="200" height="58"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7m-hD-BNy" customClass="PPSunsetView">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="66"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-zG-taq" customClass="PPGoldenHourProgressView">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="66"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="wordWrap" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0o9-eA-PDP">
+                        <rect key="frame" x="0.5" y="78" width="179" height="84"/>
+                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="70"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kya-m5-CQp">
+                        <rect key="frame" x="179.5" y="80" width="29" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00 - 00:00" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnH-Bi-pYV">
+                        <rect key="frame" x="20" y="165" width="160" height="15"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
+                        <color key="textColor" red="0.93333333330000001" green="0.72156862749999995" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="activity_indicator_i.png" translatesAutoresizingMaskIntoConstraints="NO" id="z4R-xd-IuL" customClass="VPActivityIndicatorView">
+                        <rect key="frame" x="93.5" y="92.5" width="13" height="15"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="KBV-zw-trD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5iS-zV-iNe"/>
+                <constraint firstItem="nEk-zG-taq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5yZ-4t-wtn"/>
+                <constraint firstAttribute="bottom" secondItem="MnH-Bi-pYV" secondAttribute="bottom" constant="20" id="7hZ-H5-Tze"/>
+                <constraint firstItem="kya-m5-CQp" firstAttribute="top" secondItem="0o9-eA-PDP" secondAttribute="top" constant="2" id="928-yc-GXM"/>
+                <constraint firstItem="0o9-eA-PDP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-10" id="Ali-0o-Vsk"/>
+                <constraint firstItem="P7m-hD-BNy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HHV-7O-Zkn"/>
+                <constraint firstItem="MnH-Bi-pYV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="ITg-Tz-0d9"/>
+                <constraint firstItem="0o9-eA-PDP" firstAttribute="top" secondItem="KBV-zw-trD" secondAttribute="bottom" id="On8-Se-2rp"/>
+                <constraint firstAttribute="trailing" secondItem="KBV-zw-trD" secondAttribute="trailing" id="PBH-yF-Q68"/>
+                <constraint firstItem="z4R-xd-IuL" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="PyM-Bj-0ZN"/>
+                <constraint firstAttribute="trailing" secondItem="P7m-hD-BNy" secondAttribute="trailing" id="Vld-xN-72Z"/>
+                <constraint firstItem="nEk-zG-taq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Vmz-bF-W0u"/>
+                <constraint firstItem="KBV-zw-trD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="YZk-Gf-coU"/>
+                <constraint firstItem="z4R-xd-IuL" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="bPA-w8-uqk"/>
+                <constraint firstItem="P7m-hD-BNy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dBb-f0-zX8"/>
+                <constraint firstAttribute="trailing" secondItem="MnH-Bi-pYV" secondAttribute="trailing" constant="20" id="e9K-6D-81B"/>
+                <constraint firstAttribute="trailing" secondItem="nEk-zG-taq" secondAttribute="trailing" id="eyF-oY-lqR"/>
+                <constraint firstItem="0o9-eA-PDP" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="20" id="gQZ-c5-Y4V"/>
+                <constraint firstItem="MnH-Bi-pYV" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="sO4-YW-cpq"/>
+                <constraint firstItem="kya-m5-CQp" firstAttribute="leading" secondItem="0o9-eA-PDP" secondAttribute="trailing" id="scQ-X7-q4t"/>
+                <constraint firstItem="0o9-eA-PDP" firstAttribute="top" secondItem="P7m-hD-BNy" secondAttribute="bottom" constant="12" id="uG6-nb-Wcx"/>
+                <constraint firstItem="0o9-eA-PDP" firstAttribute="top" secondItem="nEk-zG-taq" secondAttribute="bottom" constant="12" id="y8d-Z8-FmJ"/>
+            </constraints>
+            <connections>
+                <outlet property="activityIndicator" destination="z4R-xd-IuL" id="h55-P3-CTC"/>
+                <outlet property="descriptionLabel" destination="MnH-Bi-pYV" id="MuO-cG-TQd"/>
+                <outlet property="goldenHourProgressView" destination="nEk-zG-taq" id="iju-qG-EAZ"/>
+                <outlet property="layoutConstraintX" destination="Ali-0o-Vsk" id="x6F-zX-vJD"/>
+                <outlet property="layoutConstraintY" destination="gQZ-c5-Y4V" id="KPk-3a-xUz"/>
+                <outlet property="secundsLabel" destination="kya-m5-CQp" id="zts-xb-wkC"/>
+                <outlet property="sunriseView" destination="KBV-zw-trD" id="chz-8Q-cap"/>
+                <outlet property="sunsetView" destination="P7m-hD-BNy" id="J38-WZ-nNd"/>
+                <outlet property="timeLabel" destination="0o9-eA-PDP" id="tSP-QS-qmH"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="activity_indicator_i.png" width="13" height="15"/>
+    </resources>
+</document>
