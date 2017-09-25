@@ -827,6 +827,8 @@
 		C7CFA7461F540BB70045B61E /* ICGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGNavigationController.m; sourceTree = "<group>"; };
 		C7CFA7471F540BB70045B61E /* ICGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGViewController.h; sourceTree = "<group>"; };
 		C7CFA7481F540BB70045B61E /* ICGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGViewController.m; sourceTree = "<group>"; };
+		C7D573981F795C3300C5046D /* PPLocalNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPLocalNotification.h; sourceTree = "<group>"; };
+		C7D573991F795C3300C5046D /* PPLocalNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPLocalNotification.m; sourceTree = "<group>"; };
 		C7DC2DB81ED30DCE0015424B /* PPCalculatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCalculatorModel.h; sourceTree = "<group>"; };
 		C7DC2DB91ED30DCE0015424B /* PPCalculatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCalculatorModel.m; sourceTree = "<group>"; };
 		C7DF26EF1EBD1D02000958A2 /* PPAboutUsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPAboutUsView.xib; sourceTree = "<group>"; };
@@ -949,6 +951,7 @@
 				C725BBC01EBC81FC004A5965 /* controllers */,
 				C725BBBA1EBC7950004A5965 /* Info.plist */,
 				C7CADFEA1EC4A9EC003EE975 /* libraries */,
+				C7D573971F795C3300C5046D /* local notifications */,
 				C725BBC11EBC81FC004A5965 /* models */,
 				C77D0C8B1EE05318005E56C8 /* other views */,
 				C76BB8361F6C27E0008695E4 /* polarpro.entitlements */,
@@ -1626,6 +1629,15 @@
 				C7CFA7441F540BB70045B61E /* ICGSlideAnimation.m */,
 			);
 			path = AnimationControllers;
+			sourceTree = "<group>";
+		};
+		C7D573971F795C3300C5046D /* local notifications */ = {
+			isa = PBXGroup;
+			children = (
+				C7D573981F795C3300C5046D /* PPLocalNotification.h */,
+				C7D573991F795C3300C5046D /* PPLocalNotification.m */,
+			);
+			path = "local notifications";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
