@@ -2252,7 +2252,7 @@
 				CODE_SIGN_ENTITLEMENTS = polarpro/polarpro.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T2J773RMHH;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/polarpro/libraries",
@@ -2295,7 +2295,7 @@
 				CODE_SIGN_ENTITLEMENTS = polarpro/polarpro.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = T2J773RMHH;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/polarpro/libraries",

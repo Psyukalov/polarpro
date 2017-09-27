@@ -93,7 +93,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="site" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgA-FF-oBg">
-                                            <rect key="frame" x="171" y="74" width="19" height="14"/>
+                                            <rect key="frame" x="170.5" y="74" width="19" height="14"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
                                             <color key="textColor" red="0.93333333330000001" green="0.72156862749999995" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
