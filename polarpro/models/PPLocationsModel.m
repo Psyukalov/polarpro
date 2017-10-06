@@ -530,6 +530,20 @@
     [_locationManager requestWhenInUseAuthorization];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    switch (status) {
+        case kCLAuthorizationStatusNotDetermined:
+            break;
+        case kCLAuthorizationStatusDenied:
+            break;
+        case kCLAuthorizationStatusRestricted:
+            break;
+        default:
+            NSLog(@"Authorized;");
+            break;
+    }
+}
+
 - (void)startUpdatingLocation {
     [_locationManager startUpdatingLocation];
 }
