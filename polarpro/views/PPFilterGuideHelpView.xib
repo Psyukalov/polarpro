@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,88 +40,88 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="558.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="552.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to use" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjE-gS-532">
-                                    <rect key="frame" x="133" y="20" width="110.5" height="24.5"/>
+                                    <rect key="frame" x="137" y="20" width="102" height="23.5"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                     <color key="textColor" red="0.45490196078431372" green="0.68235294117647061" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JH1-5h-mzc">
-                                    <rect key="frame" x="20" y="32" width="93" height="1"/>
+                                    <rect key="frame" x="20" y="31.5" width="97" height="1"/>
                                     <color key="backgroundColor" red="0.21176470588235294" green="0.29803921568627451" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="l1N-EW-CMD"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iP4-KM-5fg">
-                                    <rect key="frame" x="263.5" y="32" width="91.5" height="1"/>
+                                    <rect key="frame" x="259" y="31.5" width="96" height="1"/>
                                     <color key="backgroundColor" red="0.21176470589999999" green="0.29803921570000003" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="lDe-gB-4oR"/>
                                     </constraints>
                                 </view>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faq_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="UPm-Rw-6RQ">
-                                    <rect key="frame" x="0.0" y="64.5" width="375" height="211"/>
+                                    <rect key="frame" x="0.0" y="63.5" width="375" height="211"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="UPm-Rw-6RQ" secondAttribute="height" multiplier="1334:750" id="uUO-ik-dHR"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI9-17-08g">
-                                    <rect key="frame" x="20" y="315.5" width="335" height="18.5"/>
+                                    <rect key="frame" x="20" y="314.5" width="335" height="17.5"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="15"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tips" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbr-Qx-pNw">
-                                    <rect key="frame" x="168" y="374.5" width="40" height="24.5"/>
+                                    <rect key="frame" x="169" y="372.5" width="38" height="23.5"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                     <color key="textColor" red="0.4549019608" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLz-5P-hg3">
-                                    <rect key="frame" x="20" y="386.5" width="128" height="1"/>
+                                    <rect key="frame" x="20" y="384" width="129" height="1"/>
                                     <color key="backgroundColor" red="0.21176470589999999" green="0.29803921570000003" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="BhY-09-vEW"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qtw-GG-Zkx">
-                                    <rect key="frame" x="228" y="386.5" width="127" height="1"/>
+                                    <rect key="frame" x="227" y="384" width="128" height="1"/>
                                     <color key="backgroundColor" red="0.21176470589999999" green="0.29803921570000003" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="Kn6-ds-tfl"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBS-CF-tZv">
-                                    <rect key="frame" x="20" y="419" width="335" height="17.5"/>
+                                    <rect key="frame" x="20" y="416" width="335" height="16.5"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho1-Sd-Uk4">
-                                    <rect key="frame" x="167.5" y="476.5" width="41.5" height="24.5"/>
+                                    <rect key="frame" x="168.5" y="472.5" width="39" height="23.5"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
                                     <color key="textColor" red="0.4549019608" green="0.68235294120000001" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGf-dW-9HL">
-                                    <rect key="frame" x="20" y="488.5" width="127.5" height="1"/>
+                                    <rect key="frame" x="20" y="484" width="128.5" height="1"/>
                                     <color key="backgroundColor" red="0.21176470589999999" green="0.29803921570000003" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="1Rz-YZ-1E2"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97z-G0-uKr">
-                                    <rect key="frame" x="229" y="488.5" width="126" height="1"/>
+                                    <rect key="frame" x="227.5" y="484" width="127.5" height="1"/>
                                     <color key="backgroundColor" red="0.21176470589999999" green="0.29803921570000003" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="Z6A-Xw-iF8"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pR-AR-KQL">
-                                    <rect key="frame" x="20" y="521" width="335" height="17.5"/>
+                                    <rect key="frame" x="20" y="516" width="335" height="16.5"/>
                                     <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>

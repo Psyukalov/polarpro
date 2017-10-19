@@ -300,6 +300,14 @@
     PPParameter *ss_2000 = [[PPParameter alloc] initWithIdentifier:17 andCaption:@"1/2000"];
     PPParameter *ss_3200 = [[PPParameter alloc] initWithIdentifier:18 andCaption:@"1/3200"];
     
+    PPParameter *ss_40 = [[PPParameter alloc] initWithIdentifier:19 andCaption:@"1/40"];
+    PPParameter *ss_80 = [[PPParameter alloc] initWithIdentifier:20 andCaption:@"1/80"];
+    PPParameter *ss_160 = [[PPParameter alloc] initWithIdentifier:21 andCaption:@"1/160"];
+    PPParameter *ss_320 = [[PPParameter alloc] initWithIdentifier:22 andCaption:@"1/320"];
+    PPParameter *ss_640 = [[PPParameter alloc] initWithIdentifier:24 andCaption:@"1/640"];
+    PPParameter *ss_1250 = [[PPParameter alloc] initWithIdentifier:25 andCaption:@"1/1250"];
+    PPParameter *ss_2500 = [[PPParameter alloc] initWithIdentifier:26 andCaption:@"1/2500"];
+    
     // Filters
     PPFilter *mavic_pro_uv = [[PPFilter alloc] initWithIdentifier:0
                                                          andModel:@"UV"];
@@ -663,6 +671,36 @@
     [osmo_nd16 setIsCalculatorParameter:YES];
     [osmo_nd32 setIsCalculatorParameter:YES];
     [osmo_nd64 setIsCalculatorParameter:YES];
+    
+    PPFilter *spark_uv = [[PPFilter alloc] initWithIdentifier:94
+                                                     andModel:@"UV"];
+    PPFilter *spark_pl = [[PPFilter alloc] initWithIdentifier:95
+                                                     andModel:@"PL"];
+    PPFilter *spark_nd4_pl = [[PPFilter alloc] initWithIdentifier:96
+                                                         andModel:@"ND4/PL"];
+    PPFilter *spark_nd8 = [[PPFilter alloc] initWithIdentifier:97
+                                                      andModel:@"ND8"];
+    PPFilter *spark_nd8_pl = [[PPFilter alloc] initWithIdentifier:98
+                                                         andModel:@"ND8/PL"];
+    PPFilter *spark_nd16 = [[PPFilter alloc] initWithIdentifier:99
+                                                       andModel:@"ND16"];
+    PPFilter *spark_nd16_pl = [[PPFilter alloc] initWithIdentifier:100
+                                                          andModel:@"ND16/PL"];
+    PPFilter *spark_nd32 = [[PPFilter alloc] initWithIdentifier:101
+                                                       andModel:@"ND32"];
+    
+    [spark_uv setURL:@"https://www.polarprofilters.com/collections/dji-spark-filters-accessories/products/dji-spark-uv-filter"];
+    [spark_pl setURL:@"https://www.polarprofilters.com/collections/dji-spark-filters-accessories"];
+    [spark_nd4_pl setURL:@"https://www.polarprofilters.com/collections/dji-spark-filters-accessories"];
+    [spark_nd8 setURL:@"https://www.polarprofilters.com/collections/dji-spark-filters-accessories"];
+    [spark_nd8_pl setURL:@"https://www.polarprofilters.com/collections/dji-spark-filters-accessories"];
+    [spark_nd16 setURL:@"https://www.polarprofilters.com/collections/dji-spark-filters-accessories"];
+    [spark_nd16_pl setURL:@"https://www.polarprofilters.com/collections/dji-spark-filters-accessories"];
+    [spark_nd32 setURL:@"https://www.polarprofilters.com/collections/dji-spark-filters-accessories"];
+    
+    [spark_nd8 setIsCalculatorParameter:YES];
+    [spark_nd16 setIsCalculatorParameter:YES];
+    [spark_nd32 setIsCalculatorParameter:YES];
     
     // Mavic Pro
     PPDevice *mavic_pro = [[PPDevice alloc] initWithIdentifier:0
@@ -1059,8 +1097,44 @@
                                                       osmo_nd32_pl,
                                                       osmo_nd64]]];
     
+    // Spark
+    PPDevice *spark = [[PPDevice alloc] initWithIdentifier:12
+                                                  withMark:@"DJI"
+                                                  andModel:@"Spark"];
+    [spark setFPSList:[NSMutableArray arrayWithArray:@[FPS_30]]];
+    [spark setShutterSpeedList:[NSMutableArray arrayWithArray:@[ss_30,
+                                                                ss_40,
+                                                                ss_50,
+                                                                ss_60,
+                                                                ss_80,
+                                                                ss_100,
+                                                                ss_120,
+                                                                ss_160,
+                                                                ss_200,
+                                                                ss_240,
+                                                                ss_320,
+                                                                ss_400,
+                                                                ss_500,
+                                                                ss_640,
+                                                                ss_800,
+                                                                ss_1000,
+                                                                ss_1250,
+                                                                ss_1600,
+                                                                ss_2000,
+                                                                ss_2500,
+                                                                ss_3200]]];
+    [spark setFilters:[NSMutableArray arrayWithArray:@[spark_uv,
+                                                       spark_pl,
+                                                       spark_nd4_pl,
+                                                       spark_nd8,
+                                                       spark_nd8_pl,
+                                                       spark_nd16,
+                                                       spark_nd16_pl,
+                                                       spark_nd32]]];
+    
     // Model
     [_devices setArray:@[mavic_pro,
+                         spark,
                          phantom_4_pro,
                          phantom_4,
                          x_5_s,

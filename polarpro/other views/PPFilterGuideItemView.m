@@ -29,9 +29,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *filterResult_1_Label;
 @property (weak, nonatomic) IBOutlet UILabel *filterResult_2_Label;
 
-/*
 @property (weak, nonatomic) IBOutlet UILabel *filterResult_3_Label;
- */
 
 @property (weak, nonatomic) IBOutlet UILabel *FPSLabel;
 @property (weak, nonatomic) IBOutlet UILabel *shutterSpeedLabel;
@@ -128,10 +126,8 @@
     [_filterResult_1_Label setFont:[UIFont fontWithName:@"BN-Regular"
                                                    size:80.f]];
     
-    /*
     [_filterResult_3_Label setFont:[UIFont fontWithName:@"BN-Book"
                                                    size:26.f]];
-     */
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] init];
     [tapGestureRecognizer setNumberOfTapsRequired:1];
@@ -248,9 +244,7 @@
                                andCompletion:^(NSString *result_1, NSString *result_2, NSString *result_3) {                                   [_filterResult_1_Label setText:result_1];
                                    [_filterResult_2_Label setText:result_2];
                                    
-                                   /*
                                     [_filterResult_3_Label setText:result_3];
-                                    */
                                    
                                    PPDevicesModel *deviceModel = [PPDevicesModel sharedDevicesModel];
                                    PPFilter *filter = [deviceModel m_filterWithName:result_1
