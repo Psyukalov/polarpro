@@ -292,3 +292,23 @@
 "next_sunset" = "Next Sunset";
 
 //----
+
+"cc_title" = "Camera Filter Guide";
+
+"cc_caption_0" = "Current Shutter Speed";
+"cc_caption_1" = "Filter";
+"cc_caption_2" = "Tips for beginners";
+
+"cc_tip_0" = "Use F stop to increase or decrise the shutter\nspeed in lower decimals, instead of using\ndifferent filtes";
+"cc_tip_1" = "Tip #1";
+"cc_tip_2" = "Tip #2";
+"cc_tip_3" = "Tip #3";
+
+"cc_unit_d" = "D";
+"cc_unit_h" = "H";
+"cc_unit_m" = "M";
+"cc_unit_m_max" = "MIN";
+"cc_unit_s" = "SEC";
+"cc_unit_s_max" = "SECONDS";
+
+//----

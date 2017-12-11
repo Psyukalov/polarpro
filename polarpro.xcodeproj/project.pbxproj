@@ -70,6 +70,15 @@
 		C775C7051EF9361200BA7BDE /* VPPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C775C7041EF9361200BA7BDE /* VPPageControl.m */; };
 		C775C7111EF957CE00BA7BDE /* PPWeatherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C775C70F1EF957CE00BA7BDE /* PPWeatherCollectionViewCell.m */; };
 		C775C7121EF957CE00BA7BDE /* PPWeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C775C7101EF957CE00BA7BDE /* PPWeatherCollectionViewCell.xib */; };
+		C77683DC1FDE77A50094C348 /* PPCameraCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77683DB1FDE77A50094C348 /* PPCameraCalculatorViewController.m */; };
+		C77683DE1FDE78470094C348 /* PPCameraCalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77683DD1FDE78470094C348 /* PPCameraCalculatorView.xib */; };
+		C77683E11FDE91F50094C348 /* CCView.m in Sources */ = {isa = PBXBuildFile; fileRef = C77683E01FDE91F50094C348 /* CCView.m */; };
+		C77683E41FDE920B0094C348 /* PPTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = C77683E31FDE920B0094C348 /* PPTipView.m */; };
+		C77683E61FDE92410094C348 /* PPTipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77683E51FDE92410094C348 /* PPTipView.xib */; };
+		C77683E91FDEA69C0094C348 /* timer_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C77683E71FDEA69B0094C348 /* timer_b@2x.png */; };
+		C77683EA1FDEA69C0094C348 /* timer_b@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C77683E81FDEA69C0094C348 /* timer_b@3x.png */; };
+		C77683ED1FDEA79C0094C348 /* info_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C77683EB1FDEA79A0094C348 /* info_b@2x.png */; };
+		C77683EE1FDEA79C0094C348 /* info_b@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C77683EC1FDEA79B0094C348 /* info_b@3x.png */; };
 		C778B5291ECD9F8400BACC9B /* VPHorizontalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C778B5251ECD9F8400BACC9B /* VPHorizontalPickerView.m */; };
 		C778B52A1ECD9F8400BACC9B /* VPSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C778B5281ECD9F8400BACC9B /* VPSegmentedControl.m */; };
 		C77D0C951EE05318005E56C8 /* PPDeviceHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C77D0C8D1EE05318005E56C8 /* PPDeviceHeaderView.m */; };
@@ -485,6 +494,18 @@
 		C775C70E1EF957CE00BA7BDE /* PPWeatherCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPWeatherCollectionViewCell.h; sourceTree = "<group>"; };
 		C775C70F1EF957CE00BA7BDE /* PPWeatherCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPWeatherCollectionViewCell.m; sourceTree = "<group>"; };
 		C775C7101EF957CE00BA7BDE /* PPWeatherCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPWeatherCollectionViewCell.xib; sourceTree = "<group>"; };
+		C77683DA1FDE77A50094C348 /* PPCameraCalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCameraCalculatorViewController.h; sourceTree = "<group>"; };
+		C77683DB1FDE77A50094C348 /* PPCameraCalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPCameraCalculatorViewController.m; sourceTree = "<group>"; };
+		C77683DD1FDE78470094C348 /* PPCameraCalculatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPCameraCalculatorView.xib; sourceTree = "<group>"; };
+		C77683DF1FDE91F50094C348 /* CCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCView.h; sourceTree = "<group>"; };
+		C77683E01FDE91F50094C348 /* CCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCView.m; sourceTree = "<group>"; };
+		C77683E21FDE920B0094C348 /* PPTipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPTipView.h; sourceTree = "<group>"; };
+		C77683E31FDE920B0094C348 /* PPTipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPTipView.m; sourceTree = "<group>"; };
+		C77683E51FDE92410094C348 /* PPTipView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPTipView.xib; sourceTree = "<group>"; };
+		C77683E71FDEA69B0094C348 /* timer_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer_b@2x.png"; sourceTree = "<group>"; };
+		C77683E81FDEA69C0094C348 /* timer_b@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer_b@3x.png"; sourceTree = "<group>"; };
+		C77683EB1FDEA79A0094C348 /* info_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info_b@2x.png"; sourceTree = "<group>"; };
+		C77683EC1FDEA79B0094C348 /* info_b@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info_b@3x.png"; sourceTree = "<group>"; };
 		C778B5241ECD9F8400BACC9B /* VPHorizontalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPHorizontalPickerView.h; sourceTree = "<group>"; };
 		C778B5251ECD9F8400BACC9B /* VPHorizontalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPHorizontalPickerView.m; sourceTree = "<group>"; };
 		C778B5271ECD9F8400BACC9B /* VPSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPSegmentedControl.h; sourceTree = "<group>"; };
@@ -1008,6 +1029,8 @@
 				C7DF26FE1EBD3791000958A2 /* PPWebViewController.m */,
 				C77D0C9E1EE05812005E56C8 /* PPWindConditionViewController.h */,
 				C77D0C9F1EE05812005E56C8 /* PPWindConditionViewController.m */,
+				C77683DA1FDE77A50094C348 /* PPCameraCalculatorViewController.h */,
+				C77683DB1FDE77A50094C348 /* PPCameraCalculatorViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -1060,6 +1083,7 @@
 				C72B728A1EFA664D00FEFFE8 /* PPWeatherForecastView.xib */,
 				C7DF26FB1EBD372A000958A2 /* PPWebView.xib */,
 				C77D0CA11EE05836005E56C8 /* PPWindConditionView.xib */,
+				C77683DD1FDE78470094C348 /* PPCameraCalculatorView.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1181,6 +1205,8 @@
 		C77D0C8B1EE05318005E56C8 /* other views */ = {
 			isa = PBXGroup;
 			children = (
+				C77683DF1FDE91F50094C348 /* CCView.h */,
+				C77683E01FDE91F50094C348 /* CCView.m */,
 				C79678A31F02B35600339CB7 /* PPAlertView.h */,
 				C79678A41F02B35600339CB7 /* PPAlertView.m */,
 				C79678A61F02B36800339CB7 /* PPAlertView.xib */,
@@ -1219,6 +1245,9 @@
 				C714280D1EE14A6F000A3087 /* PPWindConditionItemView.xib */,
 				C77D0C9B1EE0555D005E56C8 /* PPWindProctatorView.h */,
 				C77D0C9C1EE0555D005E56C8 /* PPWindProctatorView.m */,
+				C77683E21FDE920B0094C348 /* PPTipView.h */,
+				C77683E31FDE920B0094C348 /* PPTipView.m */,
+				C77683E51FDE92410094C348 /* PPTipView.xib */,
 			);
 			path = "other views";
 			sourceTree = "<group>";
@@ -1302,6 +1331,10 @@
 				C7C177C41F79318A00EF0F43 /* hub_b@3x.png */,
 				C7C177C51F79318A00EF0F43 /* instagram_b@2x.png */,
 				C7C177C61F79318A00EF0F43 /* instagram_b@3x.png */,
+				C77683EB1FDEA79A0094C348 /* info_b@2x.png */,
+				C77683EC1FDEA79B0094C348 /* info_b@3x.png */,
+				C77683E71FDEA69B0094C348 /* timer_b@2x.png */,
+				C77683E81FDEA69C0094C348 /* timer_b@3x.png */,
 				C7C177C71F79318A00EF0F43 /* twitter_b@2x.png */,
 				C7C177C81F79318A00EF0F43 /* twitter_b@3x.png */,
 				C7C177C91F79318A00EF0F43 /* vimeo_b@2x.png */,
@@ -1747,6 +1780,7 @@
 				C75B18CB1EFC176800078A95 /* PPAstronomyCollectionViewCell.xib in Resources */,
 				C7F5223A1F793EA800D6CB00 /* pin_i@3x.png in Resources */,
 				C7469FC31EFD20240098C214 /* PPGoldenHourItemView.xib in Resources */,
+				C77683EE1FDEA79C0094C348 /* info_b@3x.png in Resources */,
 				C7F522641F793EA800D6CB00 /* chancesnow_i@3x.png in Resources */,
 				C7F522291F793EA800D6CB00 /* line_i@2x.png in Resources */,
 				C775C7121EF957CE00BA7BDE /* PPWeatherCollectionViewCell.xib in Resources */,
@@ -1836,6 +1870,7 @@
 				C7F522A91F793EA800D6CB00 /* launch_screen_iphone_7_plus@3x.png in Resources */,
 				C725BBCF1EBC9CF7004A5965 /* PPMenuView.xib in Resources */,
 				C7F5223C1F793EA800D6CB00 /* polarpro_i@3x.png in Resources */,
+				C77683E61FDE92410094C348 /* PPTipView.xib in Resources */,
 				C7F5226C1F793EA800D6CB00 /* clear_i@3x.png in Resources */,
 				C7F521DA1F793EA800D6CB00 /* notification_bbi@3x.png in Resources */,
 				C7F521F31F793EA800D6CB00 /* BN-Thin.ttf in Resources */,
@@ -1844,6 +1879,7 @@
 				C7F5229F1F793EA800D6CB00 /* tstorms_i@2x.png in Resources */,
 				C7F522611F793EA800D6CB00 /* chancesleet_i_n@2x.png in Resources */,
 				C7968C191EEFF60800A34F44 /* PPKPIndexTableViewCell.xib in Resources */,
+				C77683E91FDEA69C0094C348 /* timer_b@2x.png in Resources */,
 				C7F522301F793EA800D6CB00 /* mask_logo_i@3x.png in Resources */,
 				C7F522351F793EA800D6CB00 /* pen_i@2x.png in Resources */,
 				C7DF26FC1EBD372A000958A2 /* PPWebView.xib in Resources */,
@@ -1913,6 +1949,7 @@
 				C7F522441F793EA800D6CB00 /* start_photo_i_2.png in Resources */,
 				C7F522021F793EA800D6CB00 /* Montserrat-SemiBold.ttf in Resources */,
 				C714280E1EE14A6F000A3087 /* PPWindConditionItemView.xib in Resources */,
+				C77683DE1FDE78470094C348 /* PPCameraCalculatorView.xib in Resources */,
 				C7F5221D1F793EA800D6CB00 /* geo_dot_default_i@2x.png in Resources */,
 				C7F522AD1F793FDB00D6CB00 /* wind_0_i@2x.png in Resources */,
 				C7F5220E1F793EA800D6CB00 /* check_image@3x.png in Resources */,
@@ -1932,6 +1969,7 @@
 				C7F521D91F793EA800D6CB00 /* notification_bbi@2x.png in Resources */,
 				C7F522121F793EA800D6CB00 /* drag_i@3x.png in Resources */,
 				C7F5221A1F793EA800D6CB00 /* filters_i.png in Resources */,
+				C77683ED1FDEA79C0094C348 /* info_b@2x.png in Resources */,
 				C72B72AE1EFA85F700FEFFE8 /* PPWeatherForecastItemView.xib in Resources */,
 				C7F521CF1F793EA800D6CB00 /* back_bbi@2x.png in Resources */,
 				C7F521D11F793EA800D6CB00 /* close_bbi@2x.png in Resources */,
@@ -1966,6 +2004,7 @@
 				C7F522841F793EA800D6CB00 /* mostlysunny_i@3x.png in Resources */,
 				C7F522801F793EA800D6CB00 /* mostlycloudy_i@3x.png in Resources */,
 				C7F521D41F793EA800D6CB00 /* info_bbi@3x.png in Resources */,
+				C77683EA1FDEA69C0094C348 /* timer_b@3x.png in Resources */,
 				C7F522061F793EA800D6CB00 /* about_us_i.jpg in Resources */,
 				C7F522191F793EA800D6CB00 /* filter_i@3x.png in Resources */,
 				C7F522921F793EA800D6CB00 /* rain_i_n@3x.png in Resources */,
@@ -2056,6 +2095,7 @@
 				C75B18BB1EFBFB0000078A95 /* PPSunriseView.m in Sources */,
 				C725BBD21EBC9D23004A5965 /* PPMenuViewController.m in Sources */,
 				C7B0D1851ECED86600B4FF02 /* PPFilterGuideViewController.m in Sources */,
+				C77683DC1FDE77A50094C348 /* PPCameraCalculatorViewController.m in Sources */,
 				C7CADFF11EC4AA5B003EE975 /* PPFiltersViewController.m in Sources */,
 				C74C8E781EC05AAC00B7F6EF /* PPKPInfoViewController.m in Sources */,
 				C79678A51F02B35600339CB7 /* PPAlertView.m in Sources */,
@@ -2104,6 +2144,7 @@
 				C709E4141EDC4BE2001CAE18 /* VPDraggableTableView.m in Sources */,
 				C7CFA74A1F540BB70045B61E /* ICGFlipAnimation.m in Sources */,
 				C797304D1ECB5258007FE7B2 /* PPLocationsModel.m in Sources */,
+				C77683E11FDE91F50094C348 /* CCView.m in Sources */,
 				C725BC191EBCCFDE004A5965 /* PPMenuItemTableViewCell.m in Sources */,
 				C7CFA74B1F540BB70045B61E /* ICGLayerAnimation.m in Sources */,
 				C714280C1EE14A5A000A3087 /* PPWindConditionItemView.m in Sources */,
@@ -2114,6 +2155,7 @@
 				C79722D81F1786C4003BCCE3 /* PPCustomSettingsViewController.m in Sources */,
 				C775C7111EF957CE00BA7BDE /* PPWeatherCollectionViewCell.m in Sources */,
 				C7968C181EEFF60800A34F44 /* PPKPIndexTableViewCell.m in Sources */,
+				C77683E41FDE920B0094C348 /* PPTipView.m in Sources */,
 				C75B18C61EFC134300078A95 /* PPAstronomy.m in Sources */,
 				C7968C0E1EEFD2F800A34F44 /* PPKPIndexItemView.m in Sources */,
 				C7CFA74C1F540BB70045B61E /* ICGScaleAnimation.m in Sources */,

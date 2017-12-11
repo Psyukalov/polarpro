@@ -32,6 +32,7 @@
 #import "PPKPIndexViewController.h"
 #import "PPWindConditionViewController.h"
 #import "PPLocationsViewController.h"
+#import "PPCameraCalculatorViewController.h"
 
 #import "PPLocationsModel.h"
 #import "PPGeomagneticStormModel.h"
@@ -189,9 +190,12 @@
 }
 
 - (void)tapGestureRecognizedOnFilterGuideViewAction:(UITapGestureRecognizer *)sender {
-    PPFilterGuideViewController *filterGuideVC = [[PPFilterGuideViewController alloc] init];
-    [self.navigationController pushViewController:filterGuideVC
-                                         animated:YES];
+//    PPFilterGuideViewController *filterGuideVC = [[PPFilterGuideViewController alloc] init];
+//    [self.navigationController pushViewController:filterGuideVC
+//                                         animated:YES];
+    PPCameraCalculatorViewController *cameraCalculatorVC = [PPCameraCalculatorViewController new];
+        [self.navigationController pushViewController:cameraCalculatorVC
+                                             animated:YES];
 }
 
 - (void)tapGestureRecognizedOnSiteViewAction:(UITapGestureRecognizer *)sender {

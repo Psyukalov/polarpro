@@ -26,12 +26,19 @@
 @property (strong, nonatomic) NSLayoutConstraint *rightPaddingLC;
 
 @property (strong, nonatomic) NSMutableArray <UILabel *> *labels;
+@property (strong, nonatomic) NSMutableArray <UILabel *> *secondLabels;
 
 @property (strong, nonatomic) UIFont *defaultFont;
 @property (strong, nonatomic) UIFont *selectedFont;
 
+@property (strong, nonatomic) UIFont *secondDefaultFont;
+@property (strong, nonatomic) UIFont *secondSelectedFont;
+
 @property (strong, nonatomic) UIColor *defaultColor;
 @property (strong, nonatomic) UIColor *selectedColor;
+
+@property (strong, nonatomic) UIColor *secondDefaultColor;
+@property (strong, nonatomic) UIColor *secondSelectedColor;
 
 @property (assign, nonatomic) NSUInteger count;
 
@@ -74,6 +81,7 @@
 
 - (void)setup {
     _labels = [[NSMutableArray alloc] init];
+    _secondLabels = [NSMutableArray new];
     _defaultFont = [UIFont systemFontOfSize:14.f];
     _selectedFont = _defaultFont;
     _defaultColor = [UIColor lightGrayColor];
@@ -177,6 +185,48 @@
     }
 }
 
+- (void)setSecondFont:(UIFont *)font
+             forState:(VPState)state {
+    switch (state) {
+        case VPDefaultState:
+            _secondDefaultFont = font;
+            break;
+        case VPSelectedState:
+            _secondSelectedFont = font;
+            break;
+        default:
+            break;
+    }
+    if (_secondLabels.count > 0) {
+        for (UILabel *label in _secondLabels) {
+            [label setFont:_secondDefaultFont];
+            if (label.tag == _selectedIndex) {
+                [label setFont:_secondSelectedFont];
+            }
+        }
+    }
+}
+
+- (void)setSecondColor:(UIColor *)color
+              forState:(VPState)state {
+    switch (state) {
+        case VPDefaultState:
+            _secondDefaultColor = color;
+            break;
+        case VPSelectedState:
+            _secondSelectedColor = color;
+            break;
+        default:
+            break;
+    }
+    if (_secondLabels.count > 0) {
+        for (UILabel *label in _secondLabels) {
+            [label setTextColor:_secondDefaultColor];
+            [label setHighlightedTextColor:_secondSelectedColor];
+        }
+    }
+}
+
 - (void)reloadData {
     if ([self checkDelegate] && [_delegate respondsToSelector:@selector(numberOfItemsInPickerView:)]) {
         _count = [_delegate numberOfItemsInPickerView:self];
@@ -226,14 +276,16 @@
                                                                         attribute:NSLayoutAttributeTop
                                                                        multiplier:1.f
                                                                          constant:0.f]];
-                [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:label
-                                                                        attribute:NSLayoutAttributeBottom
-                                                                        relatedBy:NSLayoutRelationEqual
-                                                                           toItem:_scrollView
-                                                                        attribute:NSLayoutAttributeBottom
-                                                                       multiplier:1.f
-                                                                         constant:0.f]];
-                if (isFirstLabel) {
+                if (!_useSecondTitle) {
+                    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:label
+                                                                            attribute:NSLayoutAttributeBottom
+                                                                            relatedBy:NSLayoutRelationEqual
+                                                                               toItem:_scrollView
+                                                                            attribute:NSLayoutAttributeBottom
+                                                                           multiplier:1.f
+                                                                             constant:0.f]];
+                }
+                if (isFirstLabel && !_useSecondTitle) {
                     [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:label
                                                                             attribute:NSLayoutAttributeCenterY
                                                                             relatedBy:NSLayoutRelationEqual
@@ -259,6 +311,46 @@
                                                                              constant:0.f]];
                 }
                 [_labels addObject:label];
+                if (_useSecondTitle) {
+                    NSString *secondString = @"";
+                    if ([self checkDelegate] && [_delegate respondsToSelector:@selector(pickerView:secondTitleForItemAtIndex:)]) {
+                        secondString = [_delegate pickerView:self secondTitleForItemAtIndex:i];
+                    }
+                    UILabel *secondLabel = [UILabel new];
+                    [secondLabel setNumberOfLines:1];
+                    [secondLabel setLineBreakMode:NSLineBreakByWordWrapping];
+                    [secondLabel setText:secondString];
+                    [secondLabel setTextColor:_secondDefaultColor];
+                    [secondLabel setHighlightedTextColor:_secondSelectedColor];
+                    [secondLabel setFont:isFirstLabel ? _secondSelectedFont : _secondDefaultFont];
+                    [secondLabel setHighlighted:isFirstLabel];
+                    [secondLabel setTextAlignment:NSTextAlignmentLeft];
+                    [secondLabel sizeToFit];
+                    [secondLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+                    [_scrollView addSubview:secondLabel];
+                    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:secondLabel
+                                                                            attribute:NSLayoutAttributeLeading
+                                                                            relatedBy:NSLayoutRelationEqual
+                                                                               toItem:label
+                                                                            attribute:NSLayoutAttributeLeading
+                                                                           multiplier:1.f
+                                                                             constant:0.f]];
+                    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:secondLabel
+                                                                            attribute:NSLayoutAttributeTrailing
+                                                                            relatedBy:NSLayoutRelationEqual
+                                                                               toItem:label
+                                                                            attribute:NSLayoutAttributeTrailing
+                                                                           multiplier:1.f
+                                                                             constant:0.f]];
+                    [_scrollView addConstraint:[NSLayoutConstraint constraintWithItem:secondLabel
+                                                                            attribute:NSLayoutAttributeTop
+                                                                            relatedBy:NSLayoutRelationEqual
+                                                                               toItem:label
+                                                                            attribute:NSLayoutAttributeBottom
+                                                                           multiplier:1.f
+                                                                             constant:-10.f]];
+                    [_secondLabels addObject:secondLabel];
+                }
             }
             [self animate:NO];
         }
@@ -304,9 +396,19 @@
     UILabel *labelToDeselect = _labels[_selectedIndex];
     [labelToDeselect setFont:_defaultFont];
     [labelToDeselect setHighlighted:NO];
+    if (_useSecondTitle) {
+        UILabel *secondLabelToDeselect = _secondLabels[_selectedIndex];
+        [secondLabelToDeselect setFont:_secondDefaultFont];
+        [secondLabelToDeselect setHighlighted:NO];
+    }
     UILabel *labelToSelect = _labels[selectedIndex];
     [labelToSelect setFont:_selectedFont];
     [labelToSelect setHighlighted:YES];
+    if (_useSecondTitle) {
+        UILabel *secondLabelToSelect = _secondLabels[selectedIndex];
+        [secondLabelToSelect setFont:_secondSelectedFont];
+        [secondLabelToSelect setHighlighted:YES];
+    }
     _selectedIndex = selectedIndex;
     if (animated) {
         AudioServicesPlaySystemSound(1306);
@@ -340,6 +442,11 @@
             [self setFadeWithLabel:_labels[i]
                        withPercent:percent
                           animated:animated];
+            if (_useSecondTitle) {
+                [self setFadeWithLabel:_secondLabels[i]
+                           withPercent:percent
+                              animated:animated];
+            }
         } else if (i > _selectedIndex) {
             CGFloat percent;
             switch (i - _selectedIndex) {
@@ -359,10 +466,20 @@
             [self setFadeWithLabel:_labels[i]
                        withPercent:percent
                           animated:animated];
+            if (_useSecondTitle) {
+                [self setFadeWithLabel:_secondLabels[i]
+                           withPercent:percent
+                              animated:animated];
+            }
         } else {
             [self setFadeWithLabel:_labels[i]
                        withPercent:1.f
                           animated:animated];
+            if (_useSecondTitle) {
+                [self setFadeWithLabel:_secondLabels[i]
+                           withPercent:1.f
+                              animated:animated];
+            }
         }
     }
 }

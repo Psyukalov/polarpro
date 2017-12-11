@@ -241,10 +241,11 @@
     [_calculatorModel calculateResultWithFPS:FPS
                                   withFilter:filter
                             withShutterSpeed:shutterSpeed
-                               andCompletion:^(NSString *result_1, NSString *result_2, NSString *result_3) {                                   [_filterResult_1_Label setText:result_1];
-                                   [_filterResult_2_Label setText:result_2];
+                               andCompletion:^(NSString *result_1, NSString *result_2, NSString *result_3) {
                                    
-                                    [_filterResult_3_Label setText:result_3];
+                                   [_filterResult_1_Label setText:result_1];
+                                   [_filterResult_2_Label setText:result_2];
+                                   [_filterResult_3_Label setText:result_3];
                                    
                                    PPDevicesModel *deviceModel = [PPDevicesModel sharedDevicesModel];
                                    PPFilter *filter = [deviceModel m_filterWithName:result_1

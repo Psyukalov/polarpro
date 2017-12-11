@@ -24,12 +24,13 @@ typedef NS_ENUM(NSUInteger, VPState) {
 
 - (NSUInteger)numberOfItemsInPickerView:(VPHorizontalPickerView *)pickerView;
 
-- (NSString *)pickerView:(VPHorizontalPickerView *)pickerView
-     titleForItemAtIndex:(NSUInteger)index;
+- (NSString *)pickerView:(VPHorizontalPickerView *)pickerView titleForItemAtIndex:(NSUInteger)index;
 
 @optional
 
 - (CGFloat)marginBetweenItemsInPickerView:(VPHorizontalPickerView *)pickerView;
+
+- (NSString *)pickerView:(VPHorizontalPickerView *)pickerView secondTitleForItemAtIndex:(NSUInteger)index;
 
 - (void)pickerView:(VPHorizontalPickerView *)pickerView didSelectItemAtIndex:(NSUInteger)index;
 
@@ -45,6 +46,7 @@ typedef NS_ENUM(NSUInteger, VPState) {
 @property (assign, nonatomic) CGFloat padding;
 
 @property (assign, nonatomic) BOOL useSound;
+@property (assign, nonatomic) BOOL useSecondTitle;
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex
                 animated:(BOOL)animated;
@@ -54,6 +56,12 @@ typedef NS_ENUM(NSUInteger, VPState) {
 
 - (void)setColor:(UIColor *)color
         forState:(VPState)state;
+
+- (void)setSecondFont:(UIFont *)font
+             forState:(VPState)state;
+
+- (void)setSecondColor:(UIColor *)color
+              forState:(VPState)state;
 
 - (void)reloadData;
 
