@@ -38,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setup];
+	[self setup];
 }
 
 - (void)setup {
