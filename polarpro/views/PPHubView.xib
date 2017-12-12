@@ -1,117 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Montserrat-Light.ttf">
-            <string>Montserrat-Light</string>
-        </array>
-        <array key="Montserrat-Medium.ttf">
-            <string>Montserrat-Medium</string>
-        </array>
-        <array key="Montserrat-Regular.ttf">
-            <string>Montserrat-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPHubViewController">
             <connections>
+                <outlet property="adView" destination="NK4-Ez-Sen" id="Hsm-FP-uEN"/>
+                <outlet property="carouselView" destination="7AC-W2-e93" id="ZCp-9b-EGV"/>
                 <outlet property="collectionView" destination="xCX-Hu-8AA" id="koS-ey-UYw"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="vL2-SS-1pT"/>
-                <outlet property="filterGuideLabel" destination="SJH-vO-TpL" id="fu2-9g-Pgk"/>
-                <outlet property="filterGuideView" destination="7AC-W2-e93" id="F0P-Wi-xsG"/>
                 <outlet property="refreshControl" destination="OoX-Vl-p3S" id="brB-Ui-P6Y"/>
                 <outlet property="scrollView" destination="IYf-DL-Uhg" id="T3d-9N-wyC"/>
-                <outlet property="siteLabel" destination="EbP-If-OR2" id="TXv-nj-seN"/>
-                <outlet property="siteView" destination="NK4-Ez-Sen" id="DRn-gf-XTJ"/>
-                <outlet property="subtitleLabel" destination="QgA-FF-oBg" id="yrt-RQ-yuY"/>
-                <outlet property="tipLabel" destination="jQW-nE-2Ae" id="CTc-lF-MaD"/>
                 <outlet property="view" destination="U2I-Dv-NW9" id="o27-JT-Anr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="U2I-Dv-NW9">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYf-DL-Uhg">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             <subviews>
-                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AC-W2-e93">
-                                    <rect key="frame" x="8" y="8" width="359" height="131.66666666666666"/>
-                                    <subviews>
-                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filters_i.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z1f-sj-Gql">
-                                            <rect key="frame" x="201" y="-44.333333333333329" width="220" height="220.33333333333331"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="Z1f-sj-Gql" secondAttribute="height" multiplier="1:1" id="2bd-7G-BHq"/>
-                                                <constraint firstAttribute="width" constant="220" id="A4z-z4-gUy"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJH-vO-TpL">
-                                            <rect key="frame" x="19.999999999999996" y="48.666666666666664" width="36.666666666666657" height="19.333333333333336"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQW-nE-2Ae">
-                                            <rect key="frame" x="20" y="76" width="17" height="14"/>
-                                            <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="12"/>
-                                            <color key="textColor" red="0.93333333333333335" green="0.72156862745098038" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="jQW-nE-2Ae" firstAttribute="leading" secondItem="SJH-vO-TpL" secondAttribute="leading" id="EtR-Yc-fDC"/>
-                                        <constraint firstItem="SJH-vO-TpL" firstAttribute="leading" secondItem="7AC-W2-e93" secondAttribute="leading" constant="20" id="FCV-TV-YzP"/>
-                                        <constraint firstItem="Z1f-sj-Gql" firstAttribute="centerY" secondItem="7AC-W2-e93" secondAttribute="centerY" id="PNq-ns-0iP"/>
-                                        <constraint firstItem="jQW-nE-2Ae" firstAttribute="top" secondItem="SJH-vO-TpL" secondAttribute="bottom" constant="8" id="RhF-1B-6I8"/>
-                                        <constraint firstItem="SJH-vO-TpL" firstAttribute="centerY" secondItem="7AC-W2-e93" secondAttribute="centerY" constant="-8" id="rbH-af-nmM"/>
-                                        <constraint firstAttribute="trailing" secondItem="Z1f-sj-Gql" secondAttribute="trailing" constant="-62" id="sMz-6W-1Oe"/>
-                                    </constraints>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AC-W2-e93" customClass="iCarousel">
+                                    <rect key="frame" x="0.0" y="7.9999999999999929" width="414" height="119.33333333333331"/>
                                 </view>
-                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NK4-Ez-Sen">
-                                    <rect key="frame" x="8" y="672.33333333333337" width="359" height="131.66666666666663"/>
-                                    <subviews>
-                                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="site_i.png" translatesAutoresizingMaskIntoConstraints="NO" id="JIu-nQ-Fjd">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="131.66666666666666"/>
-                                        </imageView>
-                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="site" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbP-If-OR2">
-                                            <rect key="frame" x="167.33333333333334" y="55.999999999999993" width="25.333333333333343" height="19.666666666666664"/>
-                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="site" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgA-FF-oBg">
-                                            <rect key="frame" x="171" y="85.666666666666629" width="19" height="14"/>
-                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
-                                            <color key="textColor" red="0.93333333330000001" green="0.72156862749999995" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="QgA-FF-oBg" firstAttribute="top" secondItem="EbP-If-OR2" secondAttribute="bottom" constant="10" id="3Fg-Mg-qnj"/>
-                                        <constraint firstItem="EbP-If-OR2" firstAttribute="centerY" secondItem="NK4-Ez-Sen" secondAttribute="centerY" id="Crd-dJ-ffg"/>
-                                        <constraint firstAttribute="trailing" secondItem="JIu-nQ-Fjd" secondAttribute="trailing" id="QVx-kt-t5h"/>
-                                        <constraint firstItem="QgA-FF-oBg" firstAttribute="centerX" secondItem="EbP-If-OR2" secondAttribute="centerX" id="Qsg-Tw-9bQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="JIu-nQ-Fjd" secondAttribute="bottom" id="bTq-OU-9cj"/>
-                                        <constraint firstItem="JIu-nQ-Fjd" firstAttribute="top" secondItem="NK4-Ez-Sen" secondAttribute="top" id="smj-SF-x0O"/>
-                                        <constraint firstItem="JIu-nQ-Fjd" firstAttribute="leading" secondItem="NK4-Ez-Sen" secondAttribute="leading" id="vaN-mn-CqM"/>
-                                        <constraint firstItem="EbP-If-OR2" firstAttribute="centerX" secondItem="NK4-Ez-Sen" secondAttribute="centerX" id="zfj-09-WAN"/>
-                                    </constraints>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NK4-Ez-Sen" customClass="PPAdView">
+                                    <rect key="frame" x="8" y="608.66666666666663" width="398" height="119.33333333333337"/>
                                 </view>
                                 <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xCX-Hu-8AA" customClass="VPDraggableCollectionView">
-                                    <rect key="frame" x="8" y="147.66666666666669" width="359" height="516.66666666666652"/>
+                                    <rect key="frame" x="8" y="135.33333333333334" width="398" height="465.33333333333326"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="Vts-Bx-wCQ">
                                         <size key="itemSize" width="50" height="50"/>
@@ -129,12 +57,12 @@
                             <constraints>
                                 <constraint firstItem="7AC-W2-e93" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="108:667" id="4S6-oH-nCT"/>
                                 <constraint firstAttribute="trailing" secondItem="xCX-Hu-8AA" secondAttribute="trailing" constant="8" id="5lm-kp-Ti9"/>
-                                <constraint firstAttribute="trailing" secondItem="7AC-W2-e93" secondAttribute="trailing" constant="8" id="H9R-k3-RXe"/>
+                                <constraint firstAttribute="trailing" secondItem="7AC-W2-e93" secondAttribute="trailing" id="H9R-k3-RXe"/>
                                 <constraint firstAttribute="bottom" secondItem="NK4-Ez-Sen" secondAttribute="bottom" constant="8" id="MfW-80-3ru"/>
                                 <constraint firstAttribute="trailing" secondItem="NK4-Ez-Sen" secondAttribute="trailing" constant="8" id="MnN-Vt-yh4"/>
                                 <constraint firstItem="xCX-Hu-8AA" firstAttribute="top" secondItem="7AC-W2-e93" secondAttribute="bottom" constant="8" id="Qh2-Rt-QJw"/>
                                 <constraint firstItem="NK4-Ez-Sen" firstAttribute="top" secondItem="xCX-Hu-8AA" secondAttribute="bottom" constant="8" id="RsX-3C-wnx"/>
-                                <constraint firstItem="7AC-W2-e93" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="a68-9Z-Znj"/>
+                                <constraint firstItem="7AC-W2-e93" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a68-9Z-Znj"/>
                                 <constraint firstItem="7AC-W2-e93" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="eU7-3r-6PI"/>
                                 <constraint firstItem="NK4-Ez-Sen" firstAttribute="height" secondItem="7AC-W2-e93" secondAttribute="height" id="fLx-2J-UFo"/>
                                 <constraint firstItem="xCX-Hu-8AA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="jWQ-cp-oNN"/>
@@ -156,7 +84,7 @@
                     </connections>
                 </scrollView>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoX-Vl-p3S" customClass="VPRefreshControl">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="sfA-Oc-x3y"/>
@@ -175,8 +103,4 @@
             <point key="canvasLocation" x="-401.5" y="-724.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="filters_i.png" width="440" height="373"/>
-        <image name="site_i.png" width="725" height="309"/>
-    </resources>
 </document>

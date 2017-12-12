@@ -52,10 +52,15 @@
 "filter_guide_settings" = "Filter Guide Settings";
 "filter_guide_settings_tip" = "Please choose your option";
 
+"hub_guide_0" = "Filter Guide";
+"hub_guide_tip_0" = "Please choose your option";
+
+"hub_guide_1" = "Camera Filter Guide";
+"hub_guide_tip_1" = "Please choose your option";
+
 "menu_item_choose_devices" = "Choose Your Devices";
 "menu_item_choose_filters" = "Choose Your Filters";
 "menu_item_help_with_guide" = "Help Using Calculator";
-
 
 //----
 
@@ -208,6 +213,13 @@
 
 "hub_filter_guide" = "FILTER GUIDE";
 "hub_filter_guide_tip" = "Calculate ND Filter";
+
+"hub_guide_0" = "FILTER GUIDE";
+"hub_guide_tip_0" = "Calculate ND Filter";
+
+"hub_guide_1" = "CAMERA FILTER GUIDE";
+"hub_guide_tip_1" = "Calculate delay time";
+
 "hub_site" = "www.polarpro.com";
 "shop_now" = "SHOP NOW";
 

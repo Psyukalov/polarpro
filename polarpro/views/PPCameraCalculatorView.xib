@@ -156,7 +156,7 @@
                     <color key="backgroundColor" red="0.15686274509803921" green="0.16470588235294117" blue="0.18823529411764706" alpha="1" colorSpace="deviceRGB"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tips" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vw-RX-AYq">
-                    <rect key="frame" x="177" y="420" width="23" height="16.5"/>
+                    <rect key="frame" x="176.5" y="420" width="23" height="16.5"/>
                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                     <color key="textColor" red="0.38431372549019605" green="0.41568627450980389" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>

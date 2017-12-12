@@ -79,6 +79,8 @@
 		C77683EA1FDEA69C0094C348 /* timer_b@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C77683E81FDEA69C0094C348 /* timer_b@3x.png */; };
 		C77683ED1FDEA79C0094C348 /* info_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C77683EB1FDEA79A0094C348 /* info_b@2x.png */; };
 		C77683EE1FDEA79C0094C348 /* info_b@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C77683EC1FDEA79B0094C348 /* info_b@3x.png */; };
+		C77683F11FDED0930094C348 /* PPHubCalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = C77683F01FDED0930094C348 /* PPHubCalculatorView.m */; };
+		C77683F31FDED0C10094C348 /* PPHubCalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C77683F21FDED0C10094C348 /* PPHubCalculatorView.xib */; };
 		C778B5291ECD9F8400BACC9B /* VPHorizontalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C778B5251ECD9F8400BACC9B /* VPHorizontalPickerView.m */; };
 		C778B52A1ECD9F8400BACC9B /* VPSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C778B5281ECD9F8400BACC9B /* VPSegmentedControl.m */; };
 		C77D0C951EE05318005E56C8 /* PPDeviceHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C77D0C8D1EE05318005E56C8 /* PPDeviceHeaderView.m */; };
@@ -97,6 +99,9 @@
 		C78A17411EFA9CAB00DF17F9 /* PPHourlyWeatherForecastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78A173F1EFA9CAB00DF17F9 /* PPHourlyWeatherForecastCollectionViewCell.xib */; };
 		C78D94001F20B64C005E7BE8 /* PPStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C78D93FF1F20B64C005E7BE8 /* PPStartView.m */; };
 		C78D94021F20B65E005E7BE8 /* PPStartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C78D94011F20B65E005E7BE8 /* PPStartView.xib */; };
+		C79658C81FDFD34D00A558D2 /* PPAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = C79658C71FDFD34D00A558D2 /* PPAdView.m */; };
+		C79658CA1FDFD35D00A558D2 /* PPAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79658C91FDFD35D00A558D2 /* PPAdView.xib */; };
+		C79658D01FE0103D00A558D2 /* UIImage+Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = C79658CF1FE0103D00A558D2 /* UIImage+Gif.m */; };
 		C79678A51F02B35600339CB7 /* PPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C79678A41F02B35600339CB7 /* PPAlertView.m */; };
 		C79678A71F02B36800339CB7 /* PPAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79678A61F02B36800339CB7 /* PPAlertView.xib */; };
 		C7968C071EEFCCAC00A34F44 /* PPKPIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7968C061EEFCCAC00A34F44 /* PPKPIndexViewController.m */; };
@@ -506,6 +511,9 @@
 		C77683E81FDEA69C0094C348 /* timer_b@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timer_b@3x.png"; sourceTree = "<group>"; };
 		C77683EB1FDEA79A0094C348 /* info_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info_b@2x.png"; sourceTree = "<group>"; };
 		C77683EC1FDEA79B0094C348 /* info_b@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info_b@3x.png"; sourceTree = "<group>"; };
+		C77683EF1FDED0930094C348 /* PPHubCalculatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPHubCalculatorView.h; sourceTree = "<group>"; };
+		C77683F01FDED0930094C348 /* PPHubCalculatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPHubCalculatorView.m; sourceTree = "<group>"; };
+		C77683F21FDED0C10094C348 /* PPHubCalculatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPHubCalculatorView.xib; sourceTree = "<group>"; };
 		C778B5241ECD9F8400BACC9B /* VPHorizontalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPHorizontalPickerView.h; sourceTree = "<group>"; };
 		C778B5251ECD9F8400BACC9B /* VPHorizontalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPHorizontalPickerView.m; sourceTree = "<group>"; };
 		C778B5271ECD9F8400BACC9B /* VPSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPSegmentedControl.h; sourceTree = "<group>"; };
@@ -536,6 +544,13 @@
 		C78D93FE1F20B64C005E7BE8 /* PPStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPStartView.h; sourceTree = "<group>"; };
 		C78D93FF1F20B64C005E7BE8 /* PPStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPStartView.m; sourceTree = "<group>"; };
 		C78D94011F20B65E005E7BE8 /* PPStartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPStartView.xib; sourceTree = "<group>"; };
+		C79658C61FDFD34D00A558D2 /* PPAdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAdView.h; sourceTree = "<group>"; };
+		C79658C71FDFD34D00A558D2 /* PPAdView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAdView.m; sourceTree = "<group>"; };
+		C79658C91FDFD35D00A558D2 /* PPAdView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPAdView.xib; sourceTree = "<group>"; };
+		C79658CB1FDFEDDE00A558D2 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		C79658CC1FDFEE0C00A558D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C79658CE1FE0103D00A558D2 /* UIImage+Gif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Gif.h"; sourceTree = "<group>"; };
+		C79658CF1FE0103D00A558D2 /* UIImage+Gif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gif.m"; sourceTree = "<group>"; };
 		C79678A31F02B35600339CB7 /* PPAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPAlertView.h; sourceTree = "<group>"; };
 		C79678A41F02B35600339CB7 /* PPAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPAlertView.m; sourceTree = "<group>"; };
 		C79678A61F02B36800339CB7 /* PPAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPAlertView.xib; sourceTree = "<group>"; };
@@ -1248,8 +1263,23 @@
 				C77683E21FDE920B0094C348 /* PPTipView.h */,
 				C77683E31FDE920B0094C348 /* PPTipView.m */,
 				C77683E51FDE92410094C348 /* PPTipView.xib */,
+				C77683EF1FDED0930094C348 /* PPHubCalculatorView.h */,
+				C77683F01FDED0930094C348 /* PPHubCalculatorView.m */,
+				C77683F21FDED0C10094C348 /* PPHubCalculatorView.xib */,
+				C79658C61FDFD34D00A558D2 /* PPAdView.h */,
+				C79658C71FDFD34D00A558D2 /* PPAdView.m */,
+				C79658C91FDFD35D00A558D2 /* PPAdView.xib */,
 			);
 			path = "other views";
+			sourceTree = "<group>";
+		};
+		C79658CD1FE0103D00A558D2 /* UIImage+Gif */ = {
+			isa = PBXGroup;
+			children = (
+				C79658CE1FE0103D00A558D2 /* UIImage+Gif.h */,
+				C79658CF1FE0103D00A558D2 /* UIImage+Gif.m */,
+			);
+			path = "UIImage+Gif";
 			sourceTree = "<group>";
 		};
 		C7968C1A1EF00B2E00A34F44 /* VPChartView */ = {
@@ -1273,6 +1303,8 @@
 		C7B0D18E1ECF2B9600B4FF02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C79658CC1FDFEE0C00A558D2 /* AVFoundation.framework */,
+				C79658CB1FDFEDDE00A558D2 /* AVKit.framework */,
 				C74226141EFD6E9C0048829C /* AudioToolbox.framework */,
 				C77D0C811EE00B67005E56C8 /* CoreLocation.framework */,
 				6A1555236FDAE964B2996257 /* libPods-polarpro.a */,
@@ -1603,6 +1635,7 @@
 		C7CADFEA1EC4A9EC003EE975 /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				C79658CD1FE0103D00A558D2 /* UIImage+Gif */,
 				C796E39E1EC5C12E005606F3 /* EZAlertController.swift */,
 				C7CADFEB1EC4A9EC003EE975 /* FZAccordionTableView */,
 				C7B0D1881ECF2B8000B4FF02 /* iCarousel */,
@@ -1817,6 +1850,7 @@
 				C7F522AC1F793EEC00D6CB00 /* data.json in Resources */,
 				C7F521D71F793EA800D6CB00 /* menu_bbi@2x.png in Resources */,
 				C7F5224C1F793EA800D6CB00 /* sun_circle_i@3x.png in Resources */,
+				C77683F31FDED0C10094C348 /* PPHubCalculatorView.xib in Resources */,
 				C763DB4F1F2B50D500B3CE8A /* VPRefreshControl.xib in Resources */,
 				C7F522071F793EA800D6CB00 /* activity_indicator_i@2x.png in Resources */,
 				C7F522AB1F793EE500D6CB00 /* Localizable.strings in Resources */,
@@ -1843,6 +1877,7 @@
 				C7F522451F793EA800D6CB00 /* start_photo_i_3.png in Resources */,
 				C7CADFD61EC45BF5003EE975 /* PPDevicesView.xib in Resources */,
 				C7F522211F793EA800D6CB00 /* info_i@2x.png in Resources */,
+				C79658CA1FDFD35D00A558D2 /* PPAdView.xib in Resources */,
 				C7F5223D1F793EA800D6CB00 /* proctator_direction_i@2x.png in Resources */,
 				C7CADFDE1EC46B73003EE975 /* PPDeviceTableViewCell.xib in Resources */,
 				C7F5225B1F793EA800D6CB00 /* chancerain_i@2x.png in Resources */,
@@ -2070,6 +2105,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79658C81FDFD34D00A558D2 /* PPAdView.m in Sources */,
 				C778B5291ECD9F8400BACC9B /* VPHorizontalPickerView.m in Sources */,
 				C7DF26F31EBD219E000958A2 /* PPAboutUsViewController.m in Sources */,
 				C79730491ECB42D0007FE7B2 /* PPCurrentLocationTableViewCell.m in Sources */,
@@ -2098,6 +2134,7 @@
 				C77683DC1FDE77A50094C348 /* PPCameraCalculatorViewController.m in Sources */,
 				C7CADFF11EC4AA5B003EE975 /* PPFiltersViewController.m in Sources */,
 				C74C8E781EC05AAC00B7F6EF /* PPKPInfoViewController.m in Sources */,
+				C77683F11FDED0930094C348 /* PPHubCalculatorView.m in Sources */,
 				C79678A51F02B35600339CB7 /* PPAlertView.m in Sources */,
 				C74C8E981EC06EDB00B7F6EF /* PPSupportViewController.m in Sources */,
 				C75B18CA1EFC176800078A95 /* PPAstronomyCollectionViewCell.m in Sources */,
@@ -2158,6 +2195,7 @@
 				C77683E41FDE920B0094C348 /* PPTipView.m in Sources */,
 				C75B18C61EFC134300078A95 /* PPAstronomy.m in Sources */,
 				C7968C0E1EEFD2F800A34F44 /* PPKPIndexItemView.m in Sources */,
+				C79658D01FE0103D00A558D2 /* UIImage+Gif.m in Sources */,
 				C7CFA74C1F540BB70045B61E /* ICGScaleAnimation.m in Sources */,
 				C775C7051EF9361200BA7BDE /* VPPageControl.m in Sources */,
 				C77D423A1ECC3D40000E8BA3 /* PPSearchTableViewCell.m in Sources */,

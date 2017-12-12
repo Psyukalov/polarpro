@@ -17,6 +17,7 @@
 #import "VPDraggableCollectionView.h"
 #import "VPRefreshControl.h"
 #import "PPUtils.h"
+#import "iCarousel.h"
 
 #import "PPFilterGuideViewController.h"
 #import "PPWebViewController.h"
@@ -41,24 +42,22 @@
 
 #import "VPActivityIndicatorView.h"
 #import "PPStartView.h"
+#import "PPHubCalculatorView.h"
+#import "PPAdView.h"
 
 
 #define kSpacing (8.f)
 
 
-@interface PPHubViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout, VPDraggableCollectionViewDelegate, PPLocationModelDelegate, AppListener, PPMessageCollectionViewCellDelegate, PPStartViewDelegate, UIScrollViewDelegate, VPRefreshControlDelegate>
+@interface PPHubViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout, VPDraggableCollectionViewDelegate, PPLocationModelDelegate, AppListener, PPMessageCollectionViewCellDelegate, PPStartViewDelegate, UIScrollViewDelegate, VPRefreshControlDelegate, iCarouselDataSource, iCarouselDelegate, PPAdViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 
-@property (weak, nonatomic) IBOutlet UIView *filterGuideView;
-@property (weak, nonatomic) IBOutlet UIView *siteView;
+@property (weak, nonatomic) IBOutlet iCarousel *carouselView;
 
-@property (weak, nonatomic) IBOutlet UILabel *filterGuideLabel;
-@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
-@property (weak, nonatomic) IBOutlet UILabel *siteLabel;
-@property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
+@property (weak, nonatomic) IBOutlet PPAdView *adView;
 
 @property (weak, nonatomic) IBOutlet VPDraggableCollectionView *collectionView;
 
@@ -70,6 +69,8 @@
 @property (strong, nonatomic) PPWeatherCollectionViewCell *weatherCVC;
 
 @property (strong, nonatomic) PPLocationsModel *locationModel;
+
+@property (strong, nonatomic) NSArray <PPAd *> *ads;
 
 @end
 
@@ -83,10 +84,8 @@
     [self startViewSetup];
     [self setup];
     [self setupHubElements];
-    [self localize];
-    [PPUtils resizeLabelsInView:_filterGuideView];
-    [PPUtils resizeLabelsInView:_siteView];
     [PPUtils resizeLabelsInView:_contentView];
+    [self setupCarousel];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -102,6 +101,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    [_adView stop];
     [((AppDelegate *)[APPLICATION delegate]) setListener:nil];
 }
 
@@ -111,6 +111,15 @@
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+- (void)setupCarousel {
+    [_carouselView layoutIfNeeded];
+    [_carouselView setDecelerationRate:.64f];
+    [_carouselView setBounces:NO];
+    _carouselView.type = iCarouselTypeLinear;
+    [_carouselView setDataSource:self];
+    [_carouselView setDelegate:self];
 }
 
 - (void)startViewSetup {
@@ -128,18 +137,32 @@
                            withColor:nil];
     [self createMenuBBI];
     [self createLogoBBI];
-    [_filterGuideView applyCornerRadius:6.f];
-    [_siteView applyCornerRadius:6.f];
-    [_filterGuideView setBackgroundColor:RGB(28.f, 30.f, 34.f)];
-    [_siteView setBackgroundColor:RGB(28.f, 30.f, 34.f)];
-    [_filterGuideLabel setFont:[UIFont fontWithName:@"BN-Regular"
-                                               size:34.f]];
-    UITapGestureRecognizer *tapGestureRecognizerOnFilterGuideView = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                                            action:@selector(tapGestureRecognizedOnFilterGuideViewAction:)];
-    UITapGestureRecognizer *tapGestureRecognizerOnSiteView = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                                     action:@selector(tapGestureRecognizedOnSiteViewAction:)];
-    [_filterGuideView setGestureRecognizers:@[tapGestureRecognizerOnFilterGuideView]];
-    [_siteView setGestureRecognizers:@[tapGestureRecognizerOnSiteView]];
+    _adView.delegate = self;
+    _adView.autoplay = YES;
+    
+    // TODO: Test;
+    PPAd *ad0 = [PPAd new];
+    ad0.type = PPAdTypeImage;
+    ad0.URL = @"https://www.bhphotovideo.com/images/images1000x1000/polar_pro_850454006048_strapmount_gopro_backpack_scuba_mount_1144813.jpg";
+    ad0.actionURL = @"https://vk.com";
+    ad0.showTime = 2.f;
+    
+    PPAd *ad1 = [PPAd new];
+    ad1.type = PPAdTypeImage;
+    ad1.URL = @"http://image.helipal.com/polarpro-filter-p4p-cinema-shutter-big.jpg";
+    ad1.actionURL = @"https://www.facebook.com";
+    ad1.showTime = 2.f;
+    
+    PPAd *ad5 = [PPAd new];
+    ad5.type = PPAdTypeGIF;
+    ad5.URL = @"https://media1.giphy.com/media/3o7qE52FdzR7awdCo0/giphy.gif";
+    ad1.actionURL = @"https://ok.ru";
+    ad5.showTime = 2.f;
+    
+    _ads = @[ad0, ad1, ad5];
+    //
+    
+    _adView.ads = _ads;
 }
 
 - (void)setupHubElements {
@@ -167,6 +190,7 @@
 - (void)setupDidAppear {
     static BOOL firstRun = YES;
     if (!firstRun) {
+        [_adView play];
         [_collectionView reloadData];
         return;
     }
@@ -176,39 +200,55 @@
 #pragma mark - PPLocationModelDelegate
 
 - (void)didFindNearestCityByLastCoordinate {
-    NSLog(@"Did find nearest city");
     [_collectionView reloadData];
 }
 
-#pragma mark - Actions
+#pragma mark - iCarouselDataSource, iCarouselDelegate
 
-- (void)localize {
-    [_filterGuideLabel setText:LOCALIZE(@"hub_filter_guide")];
-    [_tipLabel setText:LOCALIZE(@"hub_filter_guide_tip")];
-    [_siteLabel setText:LOCALIZE(@"hub_site")];
-    [_subtitleLabel setText:LOCALIZE(@"shop_now")];
+- (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
+    return 2;
 }
 
-- (void)tapGestureRecognizedOnFilterGuideViewAction:(UITapGestureRecognizer *)sender {
-//    PPFilterGuideViewController *filterGuideVC = [[PPFilterGuideViewController alloc] init];
-//    [self.navigationController pushViewController:filterGuideVC
-//                                         animated:YES];
-    PPCameraCalculatorViewController *cameraCalculatorVC = [PPCameraCalculatorViewController new];
+- (UIView *)carousel:(iCarousel *)carousel
+  viewForItemAtIndex:(NSInteger)index
+         reusingView:(UIView *)view {
+    if (!view) {
+        view = [[PPHubCalculatorView alloc] initWithFrame:carousel.bounds];
+    }
+    ((PPHubCalculatorView *)view).type = index;
+    return view;
+}
+
+- (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value {
+    switch (option) {
+        case iCarouselOptionVisibleItems:
+            return 4.f;
+            break;
+        case iCarouselOptionSpacing:
+            return 1.f * value;
+            break;
+        case iCarouselOptionWrap:
+            return 1.f;
+            break;
+        default:
+            return value;
+            break;
+    }
+}
+
+- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
+    if (index == 0) {
+        PPFilterGuideViewController *filterGuideVC = [[PPFilterGuideViewController alloc] init];
+        [self.navigationController pushViewController:filterGuideVC
+                                             animated:YES];
+    } else {
+        PPCameraCalculatorViewController *cameraCalculatorVC = [PPCameraCalculatorViewController new];
         [self.navigationController pushViewController:cameraCalculatorVC
                                              animated:YES];
-}
-
-- (void)tapGestureRecognizedOnSiteViewAction:(UITapGestureRecognizer *)sender {
-    PPWebViewController *webVC = [[PPWebViewController alloc] initWithURL:@"https://www.polarprofilters.com/"];
-    [self.navigationController pushViewController:webVC
-                                         animated:YES];
+    }
 }
 
 #pragma mark - UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
-}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _locationModel.locations.count == 0 ? 1 : 4;
@@ -377,6 +417,20 @@
     if (scrollView.contentOffset.y > 0.f) {
         [scrollView setContentOffset:CGPointZero];
     }
+}
+
+#pragma mark - PPAdViewDelegate
+
+- (void)didSelectDefaultAdInAdView:(PPAdView *)adView {
+    PPWebViewController *webVC = [[PPWebViewController alloc] initWithURL:@"https://www.polarprofilters.com/"];
+    [self.navigationController pushViewController:webVC
+                                         animated:YES];
+}
+
+- (void)adView:(PPAdView *)adView didSelectAdAtIndex:(NSUInteger)index {
+    PPWebViewController *webVC = [[PPWebViewController alloc] initWithURL:_ads[index].actionURL];
+    [self.navigationController pushViewController:webVC
+                                         animated:YES];
 }
 
 #pragma mark - VPRefreshControl
