@@ -157,7 +157,6 @@
     ad5.type = PPAdTypeGIF;
     ad5.URL = @"https://media1.giphy.com/media/3o7qE52FdzR7awdCo0/giphy.gif";
     ad1.actionURL = @"https://ok.ru";
-    ad5.showTime = 2.f;
     
     _ads = @[ad0, ad1, ad5];
     //

@@ -13,19 +13,21 @@
 
 #import "UIView+PPCustomView.h"
 
-#import "VPTimer.h"
+//#import "VPTimer.h"
 
 #import "UIImage+Gif.h"
 
 
 @implementation PPAd
 
-//
+- (CGFloat)showTime {
+    return _type == PPAdTypeImage ? _showTime : 0.f;
+}
 
 @end
 
 
-@interface PPAdView () <VPTimerDelegate>
+@interface PPAdView ()
 
 @property (weak, nonatomic) IBOutlet UIView *baseView;
 
@@ -35,8 +37,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
-@property (strong, nonatomic) VPTimer *timer;
 
 @property (assign, nonatomic) NSUInteger index;
 
@@ -60,8 +60,8 @@
     _siteLabel.text = LOCALIZE(@"hub_site");
     _subtitleLabel.text = LOCALIZE(@"shop_now");
     _imageView.image = [UIImage imageNamed:@"site_i.png"];
-    _timer = [[VPTimer alloc] initTimerWithTime:0];
-    _timer.delegate = self;
+    //    _timer = [[VPTimer alloc] initTimerWithTime:0];
+    //    _timer.delegate = self;
     _data = [NSMutableArray new];
     _imageView.animationRepeatCount = 1;
     [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self
@@ -112,42 +112,49 @@
 - (void)stop {
     _isPlaying = NO;
     _index = 0;
-    [_timer stop];
 }
 
 - (void)setCurrentAd:(PPAd *)ad {
     [self refresh];
+    UIImage *image;
+    CGFloat duration;
+    SEL selector;
+    if (ad.type == PPAdTypeImage) {
+        image = [UIImage imageWithData:_data[_index]];
+        duration = ad.showTime;
+        selector = @selector(nextAd);
+    } else {
+        image = [UIImage gifWithData:_data[_index]];
+        duration = image.duration;
+        selector = @selector(stopGIF);
+        _imageView.animationDuration = image.duration;
+    }
+    [self performSelector:selector
+               withObject:nil
+               afterDelay:duration];
     [UIView transitionWithView:_imageView
                       duration:1.f
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^{
                         if (ad.type == PPAdTypeImage) {
-                            _imageView.image = [UIImage imageWithData:_data[_index]];
-                            _timer.time = ad.showTime;
-                        } else if (ad.type == PPAdTypeGIF) {
-                            UIImage *imageGIF = [UIImage gifWithData:_data[_index]];
-                            _imageView.animationImages = imageGIF.images;
-                            _imageView.animationDuration = imageGIF.duration;
+                            _imageView.image = image;
+                        } else {
+                            _imageView.animationImages = image.images;
                             [_imageView startAnimating];
-                            [self performSelector:@selector(stopLastImage)
-                                       withObject:nil
-                                       afterDelay:_imageView.animationDuration];
-                            _timer.time = ad.showTime + _imageView.animationDuration;
                         }
                     }
-                    completion:^(BOOL finished) {
-                        if (ad.type == PPAdTypeImage) {
-                            _timer.time = ad.showTime;
-                        } else if (ad.type == PPAdTypeGIF) {
-                            _timer.time = ad.showTime + _imageView.animationDuration;
-                        }
-                        [_timer start];
-                    }];
+                    completion:nil];
 }
 
-- (void)stopLastImage {
+- (void)stopGIF {
     [_imageView stopAnimating];
     _imageView.image = _imageView.animationImages.lastObject;
+    [self nextAd];
+}
+
+- (void)nextAd {
+    _index = _index < _ads.count - 1 ? _index + 1 : 0;
+    [self setCurrentAd:_ads[_index]];
 }
 
 - (void)refresh {
@@ -155,13 +162,6 @@
     _imageView.image = nil;
     _imageView.animationImages = nil;
     _imageView.animationDuration = 0.f;
-}
-
-#pragma mark - VPTimerDelegate
-
-- (void)timerDidTimeEnd:(VPTimer *)timer {
-    _index = _index < _ads.count - 1 ? _index + 1 : 0;
-    [self setCurrentAd:_ads[_index]];
 }
 
 - (void)tapGR_TUI {

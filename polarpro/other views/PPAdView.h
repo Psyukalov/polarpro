@@ -24,7 +24,6 @@ typedef NS_ENUM(NSUInteger, PPAdType) {
 @property (strong, nonatomic) NSString *actionURL;
 
 @property (assign, nonatomic) CGFloat showTime;
-@property (assign, nonatomic) CGFloat animationTime;
 
 @end
 
