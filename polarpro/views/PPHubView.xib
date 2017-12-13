@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,15 +7,19 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PPHubViewController">
             <connections>
                 <outlet property="adView" destination="NK4-Ez-Sen" id="Hsm-FP-uEN"/>
+                <outlet property="calculatorViewHeightLC" destination="bAW-t1-n5j" id="efE-3U-Y3U"/>
                 <outlet property="carouselView" destination="7AC-W2-e93" id="ZCp-9b-EGV"/>
                 <outlet property="collectionView" destination="xCX-Hu-8AA" id="koS-ey-UYw"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="vL2-SS-1pT"/>
+                <outlet property="hubLC" destination="Qh2-Rt-QJw" id="bEF-2V-a6t"/>
+                <outlet property="pageControl" destination="feD-la-EXl" id="SiK-j1-fY4"/>
                 <outlet property="refreshControl" destination="OoX-Vl-p3S" id="brB-Ui-P6Y"/>
                 <outlet property="scrollView" destination="IYf-DL-Uhg" id="T3d-9N-wyC"/>
                 <outlet property="view" destination="U2I-Dv-NW9" id="o27-JT-Anr"/>
@@ -33,13 +37,19 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             <subviews>
                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AC-W2-e93" customClass="iCarousel">
-                                    <rect key="frame" x="0.0" y="7.9999999999999929" width="414" height="119.33333333333331"/>
+                                    <rect key="frame" x="0.0" y="8" width="414" height="108"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="108" id="bAW-t1-n5j"/>
+                                    </constraints>
                                 </view>
                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NK4-Ez-Sen" customClass="PPAdView">
-                                    <rect key="frame" x="8" y="608.66666666666663" width="398" height="119.33333333333337"/>
+                                    <rect key="frame" x="8" y="620" width="398" height="108"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="108" id="In5-1N-AoK"/>
+                                    </constraints>
                                 </view>
                                 <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xCX-Hu-8AA" customClass="VPDraggableCollectionView">
-                                    <rect key="frame" x="8" y="135.33333333333334" width="398" height="465.33333333333326"/>
+                                    <rect key="frame" x="8" y="132" width="398" height="480"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="Vts-Bx-wCQ">
                                         <size key="itemSize" width="50" height="50"/>
@@ -52,22 +62,33 @@
                                         <outlet property="delegate" destination="-1" id="naJ-Aj-dlb"/>
                                     </connections>
                                 </collectionView>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="feD-la-EXl">
+                                    <rect key="frame" x="196" y="105" width="23" height="37"/>
+                                </pageControl>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="7AC-W2-e93" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="108:667" id="4S6-oH-nCT"/>
+                                <constraint firstItem="feD-la-EXl" firstAttribute="top" secondItem="7AC-W2-e93" secondAttribute="bottom" constant="-11" id="593-El-9xq"/>
                                 <constraint firstAttribute="trailing" secondItem="xCX-Hu-8AA" secondAttribute="trailing" constant="8" id="5lm-kp-Ti9"/>
                                 <constraint firstAttribute="trailing" secondItem="7AC-W2-e93" secondAttribute="trailing" id="H9R-k3-RXe"/>
                                 <constraint firstAttribute="bottom" secondItem="NK4-Ez-Sen" secondAttribute="bottom" constant="8" id="MfW-80-3ru"/>
                                 <constraint firstAttribute="trailing" secondItem="NK4-Ez-Sen" secondAttribute="trailing" constant="8" id="MnN-Vt-yh4"/>
-                                <constraint firstItem="xCX-Hu-8AA" firstAttribute="top" secondItem="7AC-W2-e93" secondAttribute="bottom" constant="8" id="Qh2-Rt-QJw"/>
+                                <constraint firstItem="xCX-Hu-8AA" firstAttribute="top" secondItem="7AC-W2-e93" secondAttribute="bottom" constant="16" id="Qh2-Rt-QJw"/>
                                 <constraint firstItem="NK4-Ez-Sen" firstAttribute="top" secondItem="xCX-Hu-8AA" secondAttribute="bottom" constant="8" id="RsX-3C-wnx"/>
                                 <constraint firstItem="7AC-W2-e93" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="a68-9Z-Znj"/>
                                 <constraint firstItem="7AC-W2-e93" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="eU7-3r-6PI"/>
                                 <constraint firstItem="NK4-Ez-Sen" firstAttribute="height" secondItem="7AC-W2-e93" secondAttribute="height" id="fLx-2J-UFo"/>
                                 <constraint firstItem="xCX-Hu-8AA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="jWQ-cp-oNN"/>
                                 <constraint firstItem="NK4-Ez-Sen" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="n5c-A5-7LK"/>
+                                <constraint firstItem="feD-la-EXl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sjM-mY-eoS"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="4S6-oH-nCT"/>
+                                    <exclude reference="fLx-2J-UFo"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -100,6 +121,7 @@
                 <constraint firstAttribute="bottom" secondItem="IYf-DL-Uhg" secondAttribute="bottom" id="wVO-bq-mVX"/>
                 <constraint firstItem="OoX-Vl-p3S" firstAttribute="top" secondItem="U2I-Dv-NW9" secondAttribute="top" id="wbD-7N-1mg"/>
             </constraints>
+            <viewLayoutGuide key="safeArea" id="gEN-mJ-I92"/>
             <point key="canvasLocation" x="-401.5" y="-724.5"/>
         </view>
     </objects>

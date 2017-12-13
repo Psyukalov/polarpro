@@ -23,6 +23,7 @@
 }
 
 + (void)resizeLabelsInView:(UIView *)view {
+    return;
     CGFloat rate = PPUtils.screenRate;
     if (rate == 1.f) {
         return;
@@ -42,6 +43,7 @@
 }
 
 + (void)resizeMarginsInView:(UIView *)view {
+    return;
     CGFloat rate = PPUtils.screenRate;
     if (rate == 1.f) {
         return;

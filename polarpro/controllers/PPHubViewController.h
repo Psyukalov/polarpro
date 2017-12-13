@@ -12,6 +12,6 @@
 #import "ICGViewController.h"
 
 
-@interface PPHubViewController : ICGViewController //UIViewController
+@interface PPHubViewController : ICGViewController
 
 @end

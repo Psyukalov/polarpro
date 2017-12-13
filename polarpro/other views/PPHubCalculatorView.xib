@@ -19,7 +19,6 @@
             <connections>
                 <outlet property="imageView" destination="Ccd-Ku-Cfn" id="DvW-GH-ZAj"/>
                 <outlet property="mainView" destination="Qz7-NA-m22" id="Qvf-dr-cX8"/>
-                <outlet property="pageControl" destination="Qgj-sd-IyW" id="h8P-Kt-Mij"/>
                 <outlet property="subtitleLabel" destination="r9a-qz-53B" id="tlx-dj-kJh"/>
                 <outlet property="titleLabel" destination="efI-8m-OSl" id="omB-fc-Ks2"/>
             </connections>
@@ -51,22 +50,15 @@
                             <color key="textColor" red="0.93333333330000001" green="0.72156862749999995" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-sd-IyW">
-                            <rect key="frame" x="168" y="79" width="23" height="37"/>
-                            <color key="pageIndicatorTintColor" red="0.30588235289999999" green="0.48627450979999998" blue="0.54117647059999996" alpha="1" colorSpace="deviceRGB"/>
-                            <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </pageControl>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="efI-8m-OSl" firstAttribute="centerY" secondItem="Qz7-NA-m22" secondAttribute="centerY" constant="-8" id="3V2-Xg-HZP"/>
                         <constraint firstItem="Ccd-Ku-Cfn" firstAttribute="centerY" secondItem="Qz7-NA-m22" secondAttribute="centerY" id="4mJ-mN-QZB"/>
                         <constraint firstItem="r9a-qz-53B" firstAttribute="top" secondItem="efI-8m-OSl" secondAttribute="bottom" constant="8" id="6IE-EV-IVq"/>
-                        <constraint firstItem="Qgj-sd-IyW" firstAttribute="centerX" secondItem="Qz7-NA-m22" secondAttribute="centerX" id="Jap-0Y-oZy"/>
                         <constraint firstAttribute="trailing" secondItem="Ccd-Ku-Cfn" secondAttribute="trailing" constant="-62" id="KmV-4S-alR"/>
                         <constraint firstItem="r9a-qz-53B" firstAttribute="leading" secondItem="efI-8m-OSl" secondAttribute="leading" id="YxS-bO-7Wl"/>
                         <constraint firstItem="efI-8m-OSl" firstAttribute="leading" secondItem="Qz7-NA-m22" secondAttribute="leading" constant="20" id="e5B-TL-bTx"/>
-                        <constraint firstAttribute="bottom" secondItem="Qgj-sd-IyW" secondAttribute="bottom" constant="-8" id="esW-DM-qbb"/>
                     </constraints>
                 </view>
             </subviews>

@@ -147,6 +147,7 @@
 		C7CADFEE1EC4A9EC003EE975 /* FZAccordionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CADFED1EC4A9EC003EE975 /* FZAccordionTableView.m */; };
 		C7CADFF11EC4AA5B003EE975 /* PPFiltersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CADFF01EC4AA5B003EE975 /* PPFiltersViewController.m */; };
 		C7CADFF31EC4AA7F003EE975 /* PPFiltersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7CADFF21EC4AA7F003EE975 /* PPFiltersView.xib */; };
+		C7CBA6801FE1438400B363FE /* PPAdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CBA67F1FE1438400B363FE /* PPAdModel.m */; };
 		C7CFA7491F540BB70045B61E /* ICGBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CFA73C1F540BB70045B61E /* ICGBaseAnimation.m */; };
 		C7CFA74A1F540BB70045B61E /* ICGFlipAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CFA73E1F540BB70045B61E /* ICGFlipAnimation.m */; };
 		C7CFA74B1F540BB70045B61E /* ICGLayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CFA7401F540BB70045B61E /* ICGLayerAnimation.m */; };
@@ -849,6 +850,8 @@
 		C7CADFEF1EC4AA5B003EE975 /* PPFiltersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFiltersViewController.h; sourceTree = "<group>"; };
 		C7CADFF01EC4AA5B003EE975 /* PPFiltersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFiltersViewController.m; sourceTree = "<group>"; };
 		C7CADFF21EC4AA7F003EE975 /* PPFiltersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPFiltersView.xib; sourceTree = "<group>"; };
+		C7CBA67E1FE1438400B363FE /* PPAdModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAdModel.h; sourceTree = "<group>"; };
+		C7CBA67F1FE1438400B363FE /* PPAdModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAdModel.m; sourceTree = "<group>"; };
 		C7CFA73B1F540BB70045B61E /* ICGBaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGBaseAnimation.h; sourceTree = "<group>"; };
 		C7CFA73C1F540BB70045B61E /* ICGBaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGBaseAnimation.m; sourceTree = "<group>"; };
 		C7CFA73D1F540BB70045B61E /* ICGFlipAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGFlipAnimation.h; sourceTree = "<group>"; };
@@ -1073,6 +1076,8 @@
 				C7BD04121EDD87670085BED7 /* PPWeather.m */,
 				C797A9411F0BE7E00060302D /* VPTime.h */,
 				C797A9421F0BE7E00060302D /* VPTime.m */,
+				C7CBA67E1FE1438400B363FE /* PPAdModel.h */,
+				C7CBA67F1FE1438400B363FE /* PPAdModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -1222,6 +1227,9 @@
 			children = (
 				C77683DF1FDE91F50094C348 /* CCView.h */,
 				C77683E01FDE91F50094C348 /* CCView.m */,
+				C79658C61FDFD34D00A558D2 /* PPAdView.h */,
+				C79658C71FDFD34D00A558D2 /* PPAdView.m */,
+				C79658C91FDFD35D00A558D2 /* PPAdView.xib */,
 				C79678A31F02B35600339CB7 /* PPAlertView.h */,
 				C79678A41F02B35600339CB7 /* PPAlertView.m */,
 				C79678A61F02B36800339CB7 /* PPAlertView.xib */,
@@ -1237,6 +1245,9 @@
 				C797A92C1F0B80900060302D /* PPGoldenHourProgressView.h */,
 				C797A92D1F0B80900060302D /* PPGoldenHourProgressView.m */,
 				C797A92F1F0B80A00060302D /* PPGoldenHourProgressView.xib */,
+				C77683EF1FDED0930094C348 /* PPHubCalculatorView.h */,
+				C77683F01FDED0930094C348 /* PPHubCalculatorView.m */,
+				C77683F21FDED0C10094C348 /* PPHubCalculatorView.xib */,
 				C7968C0C1EEFD2F800A34F44 /* PPKPIndexItemView.h */,
 				C7968C0D1EEFD2F800A34F44 /* PPKPIndexItemView.m */,
 				C7968C0A1EEFD2D500A34F44 /* PPKPIndexItemView.xib */,
@@ -1252,6 +1263,9 @@
 				C75B18BC1EFBFB3700078A95 /* PPSunsetView.h */,
 				C75B18BD1EFBFB3700078A95 /* PPSunsetView.m */,
 				C75B18A21EFBF5B100078A95 /* PPSunsetView.xib */,
+				C77683E21FDE920B0094C348 /* PPTipView.h */,
+				C77683E31FDE920B0094C348 /* PPTipView.m */,
+				C77683E51FDE92410094C348 /* PPTipView.xib */,
 				C72B728C1EFA68EC00FEFFE8 /* PPWeatherForecastItemView.h */,
 				C72B728D1EFA68EC00FEFFE8 /* PPWeatherForecastItemView.m */,
 				C72B72AD1EFA85F700FEFFE8 /* PPWeatherForecastItemView.xib */,
@@ -1260,15 +1274,6 @@
 				C714280D1EE14A6F000A3087 /* PPWindConditionItemView.xib */,
 				C77D0C9B1EE0555D005E56C8 /* PPWindProctatorView.h */,
 				C77D0C9C1EE0555D005E56C8 /* PPWindProctatorView.m */,
-				C77683E21FDE920B0094C348 /* PPTipView.h */,
-				C77683E31FDE920B0094C348 /* PPTipView.m */,
-				C77683E51FDE92410094C348 /* PPTipView.xib */,
-				C77683EF1FDED0930094C348 /* PPHubCalculatorView.h */,
-				C77683F01FDED0930094C348 /* PPHubCalculatorView.m */,
-				C77683F21FDED0C10094C348 /* PPHubCalculatorView.xib */,
-				C79658C61FDFD34D00A558D2 /* PPAdView.h */,
-				C79658C71FDFD34D00A558D2 /* PPAdView.m */,
-				C79658C91FDFD35D00A558D2 /* PPAdView.xib */,
 			);
 			path = "other views";
 			sourceTree = "<group>";
@@ -2188,6 +2193,7 @@
 				C77D0CA01EE05812005E56C8 /* PPWindConditionViewController.m in Sources */,
 				C75B18BE1EFBFB3700078A95 /* PPSunsetView.m in Sources */,
 				C77D0C951EE05318005E56C8 /* PPDeviceHeaderView.m in Sources */,
+				C7CBA6801FE1438400B363FE /* PPAdModel.m in Sources */,
 				C709E4391EDC75C2001CAE18 /* PPWindCollectionViewCell.m in Sources */,
 				C79722D81F1786C4003BCCE3 /* PPCustomSettingsViewController.m in Sources */,
 				C775C7111EF957CE00BA7BDE /* PPWeatherCollectionViewCell.m in Sources */,

@@ -25,8 +25,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 
-@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
-
 @end
 
 
@@ -39,6 +37,9 @@
     [_titleLabel setFont:[UIFont fontWithName:@"BN-Regular"
                                          size:34.f]];
     [PPUtils resizeLabelsInView:_mainView];
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                            action:@selector(tapGR_TUI)];
+    [self addGestureRecognizer:tapGR];
     [self setType:0];
 }
 
@@ -67,7 +68,13 @@
     _titleLabel.text = title;
     _subtitleLabel.text = subtitle;
     _imageView.image = image;
-    _pageControl.currentPage = _type;
+}
+
+- (void)tapGR_TUI {
+    if ([_delegate respondsToSelector:@selector(didTapHubCalculatorView:withType:)]) {
+        [_delegate didTapHubCalculatorView:self
+                                  withType:_type];
+    }
 }
 
 @end

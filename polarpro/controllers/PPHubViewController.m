@@ -39,6 +39,7 @@
 #import "PPGeomagneticStormModel.h"
 
 #import "PPUser.h"
+#import "PPAdModel.h"
 
 #import "VPActivityIndicatorView.h"
 #import "PPStartView.h"
@@ -49,7 +50,7 @@
 #define kSpacing (8.f)
 
 
-@interface PPHubViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout, VPDraggableCollectionViewDelegate, PPLocationModelDelegate, AppListener, PPMessageCollectionViewCellDelegate, PPStartViewDelegate, UIScrollViewDelegate, VPRefreshControlDelegate, iCarouselDataSource, iCarouselDelegate, PPAdViewDelegate>
+@interface PPHubViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout, VPDraggableCollectionViewDelegate, PPLocationModelDelegate, AppListener, PPMessageCollectionViewCellDelegate, PPStartViewDelegate, UIScrollViewDelegate, VPRefreshControlDelegate, iCarouselDataSource, iCarouselDelegate, PPAdViewDelegate, PPHubCalculatorViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
@@ -63,6 +64,10 @@
 
 @property (weak, nonatomic) IBOutlet VPRefreshControl *refreshControl;
 
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *hubLC;
+
 @property (strong, nonatomic) PPAstronomyCollectionViewCell *astronomyCVC;
 @property (strong, nonatomic) PPKPinfoCollectionViewCell *KPInfoCVC;
 @property (strong, nonatomic) PPWindCollectionViewCell *windCVC;
@@ -72,6 +77,10 @@
 
 @property (strong, nonatomic) NSArray <PPAd *> *ads;
 
+@property (assign, nonatomic) BOOL isIphoneX;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *calculatorViewHeightLC;
+
 @end
 
 
@@ -79,10 +88,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _isIphoneX = NO;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        if ([[UIScreen mainScreen] nativeBounds].size.height == 2436.f) {
+            _isIphoneX = YES;
+        }
+    }
+    if (_isIphoneX) {
+        _calculatorViewHeightLC.constant = 224.f;
+    }
     [_scrollView setAlwaysBounceVertical:YES];
     [_refreshControl setDelegate:self];
     [self startViewSetup];
     [self setup];
+    [self design];
     [self setupHubElements];
     [PPUtils resizeLabelsInView:_contentView];
     [self setupCarousel];
@@ -139,29 +158,16 @@
     [self createLogoBBI];
     _adView.delegate = self;
     _adView.autoplay = YES;
-    
-    // TODO: Test;
-    PPAd *ad0 = [PPAd new];
-    ad0.type = PPAdTypeImage;
-    ad0.URL = @"https://www.bhphotovideo.com/images/images1000x1000/polar_pro_850454006048_strapmount_gopro_backpack_scuba_mount_1144813.jpg";
-    ad0.actionURL = @"https://vk.com";
-    ad0.showTime = 2.f;
-    
-    PPAd *ad1 = [PPAd new];
-    ad1.type = PPAdTypeImage;
-    ad1.URL = @"http://image.helipal.com/polarpro-filter-p4p-cinema-shutter-big.jpg";
-    ad1.actionURL = @"https://www.facebook.com";
-    ad1.showTime = 2.f;
-    
-    PPAd *ad5 = [PPAd new];
-    ad5.type = PPAdTypeGIF;
-    ad5.URL = @"https://media1.giphy.com/media/3o7qE52FdzR7awdCo0/giphy.gif";
-    ad1.actionURL = @"https://ok.ru";
-    
-    _ads = @[ad0, ad1, ad5];
-    //
-    
-    _adView.ads = _ads;
+    [[PPAdModel new] adsWithCompletion:^(NSArray <PPAd *> *ads, NSError *error) {
+        _ads = ads;
+        _adView.ads = _ads;
+    }];
+}
+
+- (void)design {
+    _hubLC.constant = _isIphoneX ? 8.f : 16.f;
+    _pageControl.hidden = _isIphoneX;
+    _pageControl.transform = CGAffineTransformMakeScale(.8f, .8f);
 }
 
 - (void)setupHubElements {
@@ -205,16 +211,36 @@
 #pragma mark - iCarouselDataSource, iCarouselDelegate
 
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
-    return 2;
+    return _isIphoneX ? 1 : 2;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel
   viewForItemAtIndex:(NSInteger)index
          reusingView:(UIView *)view {
     if (!view) {
-        view = [[PPHubCalculatorView alloc] initWithFrame:carousel.bounds];
+        if (_isIphoneX) {
+            view = [[UIView alloc] initWithFrame:carousel.bounds];
+            view.backgroundColor = [UIColor clearColor];
+            CGRect frame_0 = CGRectMake(0.f, 0.f, WIDTH, 108.f);
+            CGRect frame_1 = CGRectMake(0.f, 116.f, WIDTH, 108.f);
+            PPHubCalculatorView *filterGuideView = [[PPHubCalculatorView alloc] initWithFrame:frame_0];
+            PPHubCalculatorView *cameraFilterGuideView = [[PPHubCalculatorView alloc] initWithFrame:frame_1];
+            filterGuideView.delegate = self;
+            cameraFilterGuideView.delegate = self;
+            filterGuideView.type = 0;
+            cameraFilterGuideView.type = 1;
+            [view addSubview:filterGuideView];
+            [view addSubview:cameraFilterGuideView];
+        } else {
+            view = [[PPHubCalculatorView alloc] initWithFrame:carousel.bounds];
+        }
     }
-    ((PPHubCalculatorView *)view).type = index;
+    if (_isIphoneX) {
+        //
+    } else {
+        ((PPHubCalculatorView *)view).delegate = self;
+        ((PPHubCalculatorView *)view).type = index;
+    }
     return view;
 }
 
@@ -227,7 +253,7 @@
             return 1.f * value;
             break;
         case iCarouselOptionWrap:
-            return 1.f;
+            return _isIphoneX ? 0.f : 1.f;
             break;
         default:
             return value;
@@ -235,8 +261,14 @@
     }
 }
 
-- (void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index {
-    if (index == 0) {
+- (void)carouselDidScroll:(iCarousel *)carousel {
+    _pageControl.currentPage = carousel.currentItemIndex;
+}
+
+#pragma mark - PPHubCalculatorViewDelegate
+
+- (void)didTapHubCalculatorView:(PPHubCalculatorView *)hubCalculatorView withType:(NSUInteger)type {
+    if (type == 0) {
         PPFilterGuideViewController *filterGuideVC = [[PPFilterGuideViewController alloc] init];
         [self.navigationController pushViewController:filterGuideVC
                                              animated:YES];

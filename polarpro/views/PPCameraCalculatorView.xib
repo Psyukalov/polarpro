@@ -152,11 +152,14 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5i-Ia-hxZ" customClass="iCarousel">
-                    <rect key="frame" x="0.0" y="396" width="375" height="271"/>
+                    <rect key="frame" x="0.0" y="411" width="375" height="256"/>
                     <color key="backgroundColor" red="0.15686274509803921" green="0.16470588235294117" blue="0.18823529411764706" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="750" constant="256" id="rst-ng-KDi"/>
+                    </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tips" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vw-RX-AYq">
-                    <rect key="frame" x="176.5" y="420" width="23" height="16.5"/>
+                    <rect key="frame" x="177" y="435" width="23" height="16.5"/>
                     <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                     <color key="textColor" red="0.38431372549019605" green="0.41568627450980389" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -190,7 +193,6 @@
                 <constraint firstItem="j9u-9I-QqQ" firstAttribute="top" secondItem="zIP-if-HGv" secondAttribute="bottom" constant="10" id="0aE-0m-qRI"/>
                 <constraint firstItem="OgX-XA-4Aj" firstAttribute="top" secondItem="tQW-ZN-8W8" secondAttribute="bottom" constant="10" id="0uX-hO-jF2"/>
                 <constraint firstItem="6B6-JM-4GL" firstAttribute="centerY" secondItem="tQW-ZN-8W8" secondAttribute="centerY" id="1wU-q6-pai"/>
-                <constraint firstItem="A5i-Ia-hxZ" firstAttribute="top" secondItem="OgX-XA-4Aj" secondAttribute="bottom" constant="16" id="4Lz-tQ-Vie"/>
                 <constraint firstItem="zIP-if-HGv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="6s4-hv-0Ks"/>
                 <constraint firstItem="A5i-Ia-hxZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AQp-Lf-5P6"/>
                 <constraint firstItem="9vw-RX-AYq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BT7-po-sNU"/>
@@ -199,6 +201,7 @@
                 <constraint firstItem="jHu-9T-Sbi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Je3-Xg-y07"/>
                 <constraint firstItem="OgX-XA-4Aj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OJs-ZL-yMZ"/>
                 <constraint firstItem="9vw-RX-AYq" firstAttribute="top" secondItem="A5i-Ia-hxZ" secondAttribute="top" constant="24" id="Qji-A9-jLg"/>
+                <constraint firstItem="A5i-Ia-hxZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OgX-XA-4Aj" secondAttribute="bottom" constant="16" id="XXf-4q-99Q"/>
                 <constraint firstItem="tQW-ZN-8W8" firstAttribute="top" secondItem="j9u-9I-QqQ" secondAttribute="bottom" constant="16" id="Y6P-FY-QRg"/>
                 <constraint firstAttribute="bottom" secondItem="6Zm-Vf-xTo" secondAttribute="bottom" id="a4L-NY-Uga"/>
                 <constraint firstItem="j9u-9I-QqQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dzH-Rb-PWS"/>

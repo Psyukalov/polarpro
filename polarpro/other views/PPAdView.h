@@ -9,23 +9,7 @@
 
 #import "CCView.h"
 
-
-typedef NS_ENUM(NSUInteger, PPAdType) {
-    PPAdTypeImage = 0,
-    PPAdTypeGIF = 1
-};
-
-
-@interface PPAd : NSObject
-
-@property (assign, nonatomic) PPAdType type;
-
-@property (strong, nonatomic) NSString *URL;
-@property (strong, nonatomic) NSString *actionURL;
-
-@property (assign, nonatomic) CGFloat showTime;
-
-@end
+#import "PPAdModel.h"
 
 
 @class PPAdView;

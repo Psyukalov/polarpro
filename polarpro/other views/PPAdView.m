@@ -13,18 +13,7 @@
 
 #import "UIView+PPCustomView.h"
 
-//#import "VPTimer.h"
-
 #import "UIImage+Gif.h"
-
-
-@implementation PPAd
-
-- (CGFloat)showTime {
-    return _type == PPAdTypeImage ? _showTime : 0.f;
-}
-
-@end
 
 
 @interface PPAdView ()
@@ -60,8 +49,6 @@
     _siteLabel.text = LOCALIZE(@"hub_site");
     _subtitleLabel.text = LOCALIZE(@"shop_now");
     _imageView.image = [UIImage imageNamed:@"site_i.png"];
-    //    _timer = [[VPTimer alloc] initTimerWithTime:0];
-    //    _timer.delegate = self;
     _data = [NSMutableArray new];
     _imageView.animationRepeatCount = 1;
     [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self
